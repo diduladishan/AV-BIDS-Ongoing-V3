@@ -7,7 +7,6 @@ interface AvRequirementsProps {
 }
 
 const AvRequirements: FC<AvRequirementsProps> = ({ event }) => {
-  console.log(event);
   const [open, setOpen] = useState(false);
 
   const handleOpen = () => setOpen(!open);

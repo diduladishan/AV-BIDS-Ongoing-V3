@@ -4,6 +4,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import EVENTDETAILS_03 from "../../../../assets/13_event_details_page/Rectangle 3759.png";
 import EVENTDETAILS_04 from "../../../../assets/13_event_details_page/location.png";
 import { Event } from "../../../../types";
+import LazyLoad from 'react-lazy-load';
 
 interface OtherEventsProps {
   events: Event[];
@@ -38,15 +39,17 @@ const OtherEvents: FC<OtherEventsProps> = ({ events, loading }) => {
                   }}
                 >
                   <div className='flex justify-center sm:justify-left'>
-                    <img
-                      src={
-                        event?.thumbnail[0]?.url
-                          ? `https://av-bids-bucket.s3.ap-south-1.amazonaws.com/${event?.thumbnail[0]?.url}`
-                          : EVENTDETAILS_03
-                      }
-                      alt='Event Poster'
-                      className='object-scale-down w-[181px] h-[121px]'
-                    />
+                    <LazyLoad height={150} threshold={0.99}>
+                      <img
+                        src={
+                          event?.thumbnail[0]?.url
+                            ? `https://av-bids-bucket.s3.ap-south-1.amazonaws.com/${event?.thumbnail[0]?.url}`
+                            : EVENTDETAILS_03
+                        }
+                        alt='Event Poster'
+                        className='rounded-lg h-[150px] w-full md:min-w-[230px] md:max-w-[230px] object-cover'
+                      />
+                    </LazyLoad>
                   </div>
 
                   <div>

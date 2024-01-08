@@ -136,7 +136,7 @@ function ProposalsTable() {
                             <Typography
                               variant="small"
                               color="blue-gray"
-                              className="font-normal"
+                              className="font-normal truncate"
                             >
                               {name}
                             </Typography>

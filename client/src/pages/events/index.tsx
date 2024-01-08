@@ -117,9 +117,8 @@ function Index() {
 
   return (
     <div>
-      <Breadcrumbs />
       {loading ? (
-        <div className="flex items-center justify-center h-full">
+        <div className='flex items-center justify-center h-full'>
           <Spinner />
         </div>
       ) : (
@@ -127,21 +126,21 @@ function Index() {
           {/* <div>
             <h2 className="text-center text-primary mb-16">Event Listings </h2>
           </div> */}
-          <div className="mb-10">
+          <div className='mb-10'>
             <AlertBox
               color={color}
-              variant="ghost"
+              variant='ghost'
               text={message!}
               open={open}
               setOpen={() =>
-                dispatch(setAlert({ open: false, message: "", color: "green" }))
+                dispatch(setAlert({ open: false, message: '', color: 'green' }))
               }
             />
           </div>
 
-          <div className="flex ">
-            <Card className="h-[calc(120vh-2rem)] w-full max-w-[20rem]  shadow-xl shadow-none mb-6 bg-[#fff]">
-              <div className=" ">
+          <div className='flex '>
+            <Card className='h-[calc(120vh-2rem)] w-full max-w-[20rem]  shadow-xl shadow-none mb-6 bg-[#fff]'>
+              <div className=' '>
                 <Sidebar
                   selectedEventType={selectedEventType}
                   setSelectedEventType={setSelectedEventType}
@@ -171,25 +170,27 @@ function Index() {
               applyFilters={applyFilters}
             /> */}
 
-            <div className="container mx-auto w-max">
-              <h2 className="text-center text-primary mb-4">Event Listings </h2>
-              <div className="flex items-center justify-between mb-6 mx-4">
-                <p className="text-[14px]">{events.length} events Found</p>
+            <div className='container mx-auto w-max'>
+              <Breadcrumbs />
 
-                <div className="w-[200px]">
+              <h2 className='text-center text-primary mb-4'>Event Listings </h2>
+              <div className='flex items-center justify-between mb-6 mx-4'>
+                <p className='text-[14px]'>{events.length} events Found</p>
+
+                <div className='w-[200px]'>
                   <Select
-                    label="Sort events"
+                    label='Sort events'
                     value={selectedSortOption}
                     // @ts-ignore
                     onChange={handleSortChange}
                   >
-                    <Option value="ending_soonest">Ending Soonest</Option>
-                    <Option value="budget_lowest">Budget Lowest</Option>
-                    <Option value="budget_highest">Budget Highest</Option>
-                    <Option value="audience_size_lowest">
+                    <Option value='ending_soonest'>Ending Soonest</Option>
+                    <Option value='budget_lowest'>Budget Lowest</Option>
+                    <Option value='budget_highest'>Budget Highest</Option>
+                    <Option value='audience_size_lowest'>
                       Audience Size Lowest
                     </Option>
-                    <Option value="audience_size_highest">
+                    <Option value='audience_size_highest'>
                       Audience Size Highest
                     </Option>
                   </Select>
@@ -206,7 +207,7 @@ function Index() {
                 <p>No events found for the selected filters.</p>
               )}
 
-              <div className="flex justify-end mr-5">
+              <div className='flex justify-end mr-5'>
                 {currentEvents?.length > 0 && (
                   <Pagination
                     currentPage={currentPage}

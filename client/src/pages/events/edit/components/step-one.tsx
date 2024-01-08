@@ -127,62 +127,103 @@ const StepOne: FC<StepOneProps> = ({
     }
   };
 
-  const uploadThumbnailToS3 = async (file: File, index: number) => {
-    // @ts-ignore
-    const fileExtension = file.name.split('.').pop().toLowerCase();
+   const uploadThumbnailToS3 = async (file: File, index: number) => {
+     const fileExtension = file.name.split('.').pop()?.toLowerCase();
 
-    if (fileExtension) {
-      try {
-        // Get S3 upload config
-        const uploadConfig = await api.get('/upload?type=' + fileExtension);
-        // const uploadConfig = await api.get(
-        //   'http://54.201.46.218/api/upload?type=' + fileExtension
-        // );
+     if (fileExtension) {
+       try {
+         const uploadConfig = await api.get('/upload?type=' + fileExtension);
 
-        // Upload file to S3
-        await axios.put(uploadConfig.data.url, file, {
-          headers: {
-            'Content-Type': file.type,
-          },
-          onUploadProgress: (progressEvent) => {
-            const percentCompleted = Math.round(
-              // @ts-ignore
-              (progressEvent.loaded * 100) / progressEvent.total
-            );
+         // Create an image element
+         const img = new Image();
 
-            setUploadedFiles((prevFiles) =>
-              prevFiles.map((prevFile, i) =>
-                i === index
-                  ? { ...prevFile, progress: percentCompleted }
-                  : prevFile
-              )
-            );
-          },
-        });
+         // Read the file as a data URL
+         const reader = new FileReader();
+         reader.onload = (e) => {
+           if (typeof e.target?.result === 'string') {
+             // Set the source of the image to the data URL
+             img.src = e.target.result;
 
-        // Update form data or do any other actions with the uploaded file info
-        updateFormData((prevData: any) => ({
-          ...prevData,
-          // Add logic to store thumbnail info as needed
-          thumbnail: [
-            ...(prevData.thumbnail || []), // Previous thumbnail files, if any
-            {
-              fileName: file.name,
-              url: uploadConfig.data.key,
-            },
-          ],
-        }));
-      } catch (error) {
-        console.error(error);
-      } finally {
-        setUploadedFiles((prevFiles) =>
-          prevFiles.map((prevFile, i) =>
-            i === index ? { ...prevFile, progress: 0 } : prevFile
-          )
-        );
-      }
-    }
-  };
+             // When the image is loaded, create a canvas element and draw the image on it
+             img.onload = () => {
+               const canvas = document.createElement('canvas');
+               const ctx = canvas.getContext('2d');
+
+               // Set the canvas size to the image size
+               canvas.width = img.width;
+               canvas.height = img.height;
+
+               // Draw the image on the canvas
+               ctx?.drawImage(img, 0, 0);
+
+               // Convert the canvas content to a new base64 string
+               const optimizedBase64 = canvas.toDataURL(file.type);
+
+               // Convert the base64 string to a Blob
+               const optimizedBlob = dataURItoBlob(optimizedBase64);
+
+               // Upload the optimized image to S3
+               axios.put(uploadConfig.data.url, optimizedBlob, {
+                 headers: {
+                   'Content-Type': file.type,
+                 },
+                 onUploadProgress: (progressEvent) => {
+                   const percentCompleted = Math.round(
+                     (progressEvent.loaded * 100) / progressEvent.total!
+                   );
+
+                   setThumbnailFiles((prevFiles) =>
+                     prevFiles.map((prevFile, i) =>
+                       i === index
+                         ? { ...prevFile, progress: percentCompleted }
+                         : prevFile
+                     )
+                   );
+                 },
+               });
+
+               // Update form data or do any other actions with the uploaded file info
+               updateFormData((prevData: any) => ({
+                 ...prevData,
+                 thumbnail: [
+                   ...(prevData.thumbnail || []),
+                   {
+                     fileName: file.name,
+                     url: uploadConfig.data.key,
+                   },
+                 ],
+               }));
+             };
+           }
+         };
+
+         // Read the file as data URL
+         reader.readAsDataURL(file);
+       } catch (error) {
+         console.error(error);
+       } finally {
+         setThumbnailFiles((prevFiles) =>
+           prevFiles.map((prevFile, i) =>
+             i === index ? { ...prevFile, progress: 0 } : prevFile
+           )
+         );
+       }
+     }
+   };
+
+   // Helper function to convert base64 to Blob
+   const dataURItoBlob = (dataURI: string) => {
+     const byteString = atob(dataURI.split(',')[1]);
+     const mimeString = dataURI.split(',')[0].split(':')[1].split(';')[0];
+     const ab = new ArrayBuffer(byteString.length);
+     const ia = new Uint8Array(ab);
+
+     for (let i = 0; i < byteString.length; i++) {
+       ia[i] = byteString.charCodeAt(i);
+     }
+
+     return new Blob([ab], { type: mimeString });
+   };
 
   const handleInputChange = (name: string, value: string) => {
     updateFormData((prevData: any) => ({

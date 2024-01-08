@@ -27,11 +27,7 @@ const createNewEvent = async (req, res) => {
   } catch (error) {
     console.error('Failed to create event:', error);
 
-    const statusCode = error instanceof CustomError ? 400 : 500;
-
-    res
-      .status(statusCode)
-      .json({ error: error.message || 'Internal Server Error' });
+    res.status(500).json({ error: error.message || 'Internal Server Error' });
   }
 };
 
@@ -71,11 +67,8 @@ const getAllEvents = async (req, res) => {
     res.status(200).json({ events, totalCount });
   } catch (error) {
     console.error('Failed to fetch events - ', error.message);
-    const statusCode = error instanceof CustomError ? 400 : 500;
 
-    res
-      .status(statusCode)
-      .json({ error: error.message || 'Internal Server Error' });
+    res.status(500).json({ error: error.message || 'Internal Server Error' });
   }
 };
 
@@ -93,11 +86,8 @@ const getUserEvents = async (req, res) => {
     res.status(200).json(events);
   } catch (error) {
     console.error('Failed to user events - ', error.message);
-    const statusCode = error instanceof CustomError ? 400 : 500;
 
-    res
-      .status(statusCode)
-      .json({ error: error.message || 'Internal Server Error' });
+    res.status(500).json({ error: error.message || 'Internal Server Error' });
   }
 };
 
@@ -114,11 +104,8 @@ const getEvent = async (req, res) => {
     res.status(200).json(event);
   } catch (error) {
     console.error('Failed to event - ', error.message);
-    const statusCode = error instanceof CustomError ? 400 : 500;
 
-    res
-      .status(statusCode)
-      .json({ error: error.message || 'Internal Server Error' });
+    res.status(500).json({ error: error.message || 'Internal Server Error' });
   }
 };
 
@@ -178,11 +165,7 @@ const update = async (req, res) => {
   } catch (error) {
     console.error('Failed to update event:', error);
 
-    const statusCode = error instanceof CustomError ? 400 : 500;
-
-    res
-      .status(statusCode)
-      .json({ error: error.message || 'Internal Server Error' });
+    res.status(500).json({ error: error.message || 'Internal Server Error' });
   }
 };
 
@@ -209,11 +192,8 @@ const getSavedEventsByUser = async (req, res) => {
     res.status(200).json(savedEvents);
   } catch (error) {
     console.error('Failed to fetch saved events of user - ', error.message);
-    const statusCode = error instanceof CustomError ? 400 : 500;
 
-    res
-      .status(statusCode)
-      .json({ error: error.message || 'Internal Server Error' });
+    res.status(500).json({ error: error.message || 'Internal Server Error' });
   }
 };
 
@@ -229,11 +209,8 @@ const remove = async (req, res) => {
     res.status(200).json(deletedEvent);
   } catch (error) {
     console.error('Failed to remove event - ', error.message);
-    const statusCode = error instanceof CustomError ? 400 : 500;
 
-    res
-      .status(statusCode)
-      .json({ error: error.message || 'Internal Server Error' });
+    res.status(500).json({ error: error.message || 'Internal Server Error' });
   }
 };
 
@@ -315,11 +292,8 @@ const getEventAlertsByUser = async (req, res) => {
     res.status(200).json(eventAlerts);
   } catch (error) {
     console.error('Failed to fetch event alerts of user - ', error.message);
-    const statusCode = error instanceof CustomError ? 400 : 500;
 
-    res
-      .status(statusCode)
-      .json({ error: error.message || 'Internal Server Error' });
+    res.status(500).json({ error: error.message || 'Internal Server Error' });
   }
 };
 
@@ -358,11 +332,8 @@ const removeEventAlert = async (req, res) => {
     res.status(200).json({ message: 'Event alert removed successfully', user });
   } catch (error) {
     console.error('Failed to remove event alert - ', error.message);
-    const statusCode = error instanceof CustomError ? 400 : 500;
 
-    res
-      .status(statusCode)
-      .json({ error: error.message || 'Internal Server Error' });
+    res.status(500).json({ error: error.message || 'Internal Server Error' });
   }
 };
 

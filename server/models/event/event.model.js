@@ -24,7 +24,7 @@ const User = require('../user/user.mongo');
 //   }
 // };
 
-const createEvent = async(updates, userId) => {
+const createEvent = async (updates, userId) => {
   const getUpdatedValue = (field, category) =>
     updates[field] !== undefined ? updates[field] : updates[category]?.[field];
 
@@ -305,15 +305,15 @@ const createEvent = async(updates, userId) => {
     staff: { ...updateStaff },
   });
 
-      const user = await User.findById(userId);
+  const user = await User.findById(userId);
 
-      // If the user is found, update the events array with the new event's ID
-      if (user) {
-        user.events.push(newEvent._id);
-        await user.save();
-      }
+  // If the user is found, update the events array with the new event's ID
+  if (user) {
+    user.events.push(newEvent._id);
+    await user.save();
+  }
 
-      return newEvent
+  return newEvent;
 };
 
 const getFilteredEvents = async (filters, page, pageSize, sortOption) => {
@@ -343,10 +343,13 @@ const getFilteredEvents = async (filters, page, pageSize, sortOption) => {
 
     const totalCount = await Event.countDocuments({
       ...filters,
-      status: { $ne: 'Draft' },
+      status: { $ne: 'Draft', $ne: 'Expired' },
     });
 
-    const events = await Event.find({ ...filters, status: { $ne: 'Draft' } })
+    const events = await Event.find({
+      ...filters,
+      $and: [{ status: { $ne: 'Draft' } }, { status: { $ne: 'Expired' } }],
+    })
       .sort(sorting)
       .skip(skip)
       .limit(parseInt(pageSize))
@@ -377,9 +380,9 @@ const getEventsByUser = async (userId, req, sortOption) => {
       });
     }
 
-     if (sortOption === 'active') {
-       query = query.where('status').equals('Active');
-     }
+    if (sortOption === 'active') {
+      query = query.where('status').equals('Active');
+    }
 
     const events = await query.exec();
     return events;
@@ -400,7 +403,6 @@ const getEventsById = (id, req) => Event.findById({ _id: id });
 // };
 
 const updateEvent = (id, updates) => {
-
   const getUpdatedValue = (field, category) =>
     updates[field] !== undefined ? updates[field] : updates[category]?.[field];
 
@@ -700,7 +702,11 @@ const removeEvent = (id) => {
 };
 
 const getLatestEvents = async () => {
-  return Event.find().sort({ createdAt: -1 }).limit(6);
+  return Event.find({
+    status: { $ne: 'Draft' },
+  })
+    .sort({ createdAt: -1 })
+    .limit(6);
 };
 
 module.exports = {

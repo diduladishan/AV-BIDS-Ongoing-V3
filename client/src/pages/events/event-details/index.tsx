@@ -128,21 +128,10 @@ export function Index() {
   }, [event?.createdBy]);
 
   const currentDate = new Date();
-  const eventStartDate = event ? new Date(event.eventStartDate) : null;
-  const eventEndDate = event ? new Date(event.eventEndDate) : null;
 
   const proposalDueDate = parseISO(event?.proposalDueDate!);
 
   const daysLeft = differenceInDays(proposalDueDate, currentDate);
-
-  const status =
-    event?.status === 'Draft'
-      ? 'Draft'
-      : eventStartDate && eventEndDate
-      ? currentDate <= eventStartDate && currentDate <= eventEndDate
-        ? 'Active'
-        : 'Expired'
-      : 'N/A';
 
   if (eventLoading) {
     return (
@@ -164,64 +153,36 @@ export function Index() {
         }
       />
 
-      <img src={draftMode} alt='draft mode label' className='w-full' />
       <div>
         {event?.status === 'Draft' && (
-          // <div className="bg-yellow-300/80 p-2 rounded-lg shadow-sm text-center flex items-center justify-center">
-          <div className='bg-[#f3efa3] px-4'>
-            <span className=''>
-              <p className='text-center pt-2 text-[16px] sm:text-[22px]'>
-                This event is currently in draft mode.
-              </p>
-            </span>
-            {/* <Button
-              variant="text"
-              color="indigo"
-              onClick={() => navigate(`/events/edit/${id}`)}
-              className="ml-2 p-2 text-md"
-            >
-              Edit
-            </Button> */}
+          <>
+            <img src={draftMode} alt='draft mode label' className='w-full' />
+            <div className='bg-[#f3efa3] px-4'>
+              <span className=''>
+                <p className='text-center pt-2 text-[16px] sm:text-[22px]'>
+                  This event is currently in draft mode.
+                </p>
+              </span>
 
-            <p className='text-center pb-2 text-[16px] sm:text-[22px]'>
-              Click{' '}
-              <span
-                className='cursor-pointer text-[#b39a38] font-medium'
-                onClick={() => navigate(`/events/edit/${id}`)}
-              >
-                Edit
-              </span>{' '}
-              to modify and publish the current event.
-            </p>
-          </div>
+              <p className='text-center pb-2 text-[16px] sm:text-[22px]'>
+                Click{' '}
+                <span
+                  className='cursor-pointer text-[#b39a38] font-medium'
+                  onClick={() => navigate(`/events/edit/${id}`)}
+                >
+                  Edit
+                </span>{' '}
+                to modify and publish the current event.
+              </p>
+            </div>
+            <img src={draftMode} alt='draft mode label' className='w-full' />
+          </>
         )}
       </div>
 
-      <img src={draftMode} alt='draft mode label' className='w-full' />
       <div className='grid lg:grid-cols-3 gap-4 content-center sm:mt-[100px] bg-[#fff]'>
         <div className='col-span-2 flex justify-center items-center px-8'>
           <section>
-            {/* {event?.status === "Draft" && (
-              // <div className="bg-yellow-300/80 p-2 rounded-lg shadow-sm text-center flex items-center justify-center">
-              <div>
-                <span className="text-2xl mr-2">🚧</span>
-                <span className="text-lg font-semibold">
-                  This event is currently in draft mode.
-                </span>
-                <Button
-                  variant="text"
-                  color="indigo"
-                  onClick={() => navigate(`/events/edit/${id}`)}
-                  className="ml-2 p-2 text-md"
-                >
-                  Edit
-                </Button>
-                <span className="ml-2 font-semibold text-lg">
-                  to publish. 🚧
-                </span>
-              </div>
-            )} */}
-
             <div>
               <div>
                 <h2 className='text-primary text-[40px] mb-4 sm:text-left text-center'>
@@ -261,15 +222,15 @@ export function Index() {
                   <p className='font-semibold'>Status:</p>
                   <div
                     className={`bg-${
-                      status === 'Expired'
+                      event?.status === 'Expired'
                         ? 'red'
-                        : status === 'Draft'
+                        : event?.status === 'Draft'
                         ? 'yellow' // Change this to the desired color for Draft status
                         : 'green'
                     }-500 rounded-full px-4 py-0.5`}
                   >
                     <p className='text-white text-center text-[10px] sm:text-[13px]'>
-                      {status}
+                      {event?.status}
                     </p>
                   </div>
                 </div>
@@ -281,8 +242,9 @@ export function Index() {
                       ? `https://av-bids-bucket.s3.ap-south-1.amazonaws.com/${event?.thumbnail[0]?.url}`
                       : EVENTDETAILS_03
                   }
-                  alt='aad'
-                  className='object-scale-down w-[300px]'
+                  alt='thumbnail'
+                  loading='lazy'
+                  className='object-contain md:w-[400px] rounded-lg'
                 />
               </div>
               <div className='bg-[#F3F1FB] p-6 mb-16 rounded-lg'>

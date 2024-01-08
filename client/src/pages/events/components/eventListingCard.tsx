@@ -2,6 +2,7 @@ import { Button } from '@material-tailwind/react';
 
 import { differenceInDays, parseISO } from 'date-fns';
 import { FC } from 'react';
+import LazyLoad from 'react-lazy-load';
 import { useNavigate } from 'react-router-dom';
 import { setAlertWithTimeout } from '../../../app/features/alerts/alertSlice';
 import { updateUser } from '../../../app/features/user/userSlice';
@@ -67,7 +68,14 @@ const EventListingCard: FC<EventListingCardProps> = ({ event }) => {
         <div>
           <div className='flex items-center gap-4'>
             <div>
-              <img src={thumbnailUrl} alt='aad' className='w-[73px]' />
+              <LazyLoad height={73} threshold={0.99}>
+                <img
+                  src={thumbnailUrl}
+                  alt='aad'
+                  className='w-[73px] rounded-lg object-contain'
+                  loading='eager'
+                />
+              </LazyLoad>
             </div>
 
             <div>

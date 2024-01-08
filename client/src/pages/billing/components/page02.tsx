@@ -57,7 +57,7 @@ const Page02: React.FC<Page02Props> = ({ onNext, onPrev }) => {
 
   return (
     <div>
-      <div className="bg-[#f7f6fd] px-20 py-10">
+      <div className="bg-[#f7f6fd]  py-10">
         <div className="grid sm:grid-cols-3 gap-x-16">
           <section className="bg-[#fff] px-8 py-8 rounded-xl drop-shadow mb-6 col-span-2">
             <h2 className="text-[20px] font-semibold mb-4">Billing Period</h2>
@@ -108,7 +108,7 @@ const Page02: React.FC<Page02Props> = ({ onNext, onPrev }) => {
           <div>
             <div>
               <p className="text-[28px] font-semibold mb-4">Order Summary</p>
-              <div className="grid grid-cols-2 gap-y-4 w-[400px]">
+              <div className="grid grid-cols-2 gap-y-4">
                 <div>
                   <p className="text-[#353535]">
                     {plan?.recurring.interval === "year"
@@ -182,15 +182,6 @@ const Page02: React.FC<Page02Props> = ({ onNext, onPrev }) => {
           </div>
         </div>
       </div>
-      {/* <div>
-        <Button onClick={onPrev} className='bg-primary normal-case'>
-          Previous
-        </Button>
-
-        <Button onClick={onNext} className='bg-primary normal-case'>
-          Next
-        </Button>
-      </div> */}
     </div>
   );
 };

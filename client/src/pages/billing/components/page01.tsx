@@ -35,7 +35,7 @@ const Page01: React.FC<Page01Props> = ({ onNext }) => {
         prepare their events for success.
       </p>
 
-      <div className='grid grid-cols-2 gap-1 justify-items-center px-[330px]'>
+      <div className='grid lg:grid-cols-2 gap-1 justify-items-center '>
         {prices.map((price) => (
           <PaymentPlanCard
             key={price.id}

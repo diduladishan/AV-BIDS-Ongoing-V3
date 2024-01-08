@@ -39,6 +39,7 @@ import {
 } from "@material-tailwind/react";
 
 import { MdOutlineError, MdCancelPresentation } from "react-icons/md";
+import Breadcrumbs from "../../../components/Breadcrumbs";
 
 const TABLE_HEAD = ["Title", "Event Created", "Proposals", "Status", ""];
 
@@ -112,48 +113,51 @@ function Index() {
   const handleOpen = () => setOpen(!open_01);
 
   return (
-    <div className="overflow-x-auto overflow-y-auto sm:container sm:mx-auto ">
+    <div className='overflow-x-auto overflow-y-auto sm:container sm:mx-auto '>
       <AlertBox
         color={color}
-        variant="ghost"
+        variant='ghost'
         text={message!}
         open={open}
         setOpen={handleAlertClose}
       />
-      <div className="overflow-auto">
-        <section className="bg-[#fff] px-8 py-8 rounded-xl drop-shadow mb-6 min-w-max mx-2 sm:mx-0">
-          <div className="flex items-center justify-between mb-4">
-            <h2 className="text-[20px] font-semibold ">My Events</h2>
+      <div className='overflow-auto'>
+        <div className='mb-4'>
+          <Breadcrumbs />
+        </div>
+        <section className='bg-[#fff] px-8 py-8 rounded-xl drop-shadow mb-6 min-w-max mx-2 sm:mx-0'>
+          <div className='flex items-center justify-between mb-4'>
+            <h2 className='text-[20px] font-semibold '>My Events</h2>
             <div>
               <Select
-                className="rounded-lg bg-[#F3F1FB]"
+                className='rounded-lg bg-[#F3F1FB]'
                 value={sortOption}
                 // @ts-ignore
                 onChange={handleSortChange}
               >
-                <Option value="date_posted">Date Posted</Option>
-                <Option value="expiring_soonest">Expiring Soonest</Option>
-                <Option value="active">Active</Option>
+                <Option value='date_posted'>Date Posted</Option>
+                <Option value='expiring_soonest'>Expiring Soonest</Option>
+                <Option value='active'>Active</Option>
               </Select>
             </div>
           </div>
           {loading ? (
-            <div className="flex items-center justify-center h-32">
+            <div className='flex items-center justify-center h-32'>
               <Spinner />
             </div>
           ) : myEvents.length === 0 ? (
             <p>No events found.</p>
           ) : (
-            <Card className="h-full w-full shadow-none rounded-full">
-              <table className="w-full min-w-max table-auto text-left">
+            <Card className='h-full w-full shadow-none rounded-full'>
+              <table className='w-full min-w-max table-auto text-left'>
                 <thead>
                   <tr>
                     {TABLE_HEAD.map((head) => (
                       <th
                         key={head}
-                        className="border-b border-blue-gray-100 bg-blue-gray-50 p-4 bg-[#e7daff]"
+                        className='border-b border-blue-gray-100 bg-blue-gray-50 p-4 bg-[#e7daff]'
                       >
-                        <p className="font-medium leading-none text-black text-[14px]">
+                        <p className='font-medium leading-none text-black text-[14px]'>
                           {head}
                         </p>
                       </th>
@@ -166,64 +170,64 @@ function Index() {
                     currentEvents?.map((event, index) => (
                       <tr key={event._id}>
                         <td
-                          className="p-4 border-b border-blue-gray-50 cursor-pointer"
+                          className='p-4 border-b border-blue-gray-50 cursor-pointer'
                           onClick={() => navigate(`/events/${event._id}`)}
                         >
-                          <p className="font-semibold">
+                          <p className='font-semibold'>
                             {event.title}
                             <div>
-                              <div className="rounded-full w-20 py-1 bg-[#E4FFEA] font-poppins mt-2">
-                                <p className="text-[#178751] text-center text-[12px] font-semibold">
+                              <div className='rounded-full w-20 py-1 bg-[#E4FFEA] font-poppins mt-2'>
+                                <p className='text-[#178751] text-center text-[12px] font-semibold'>
                                   {event.eventType}
                                 </p>
                               </div>
                             </div>
                           </p>
                         </td>
-                        <td className="p-4 border-b border-blue-gray-50">
+                        <td className='p-4 border-b border-blue-gray-50'>
                           <Typography
-                            variant="small"
-                            color="blue-gray"
-                            className="font-normal"
+                            variant='small'
+                            color='blue-gray'
+                            className='font-normal'
                           >
-                            {format(new Date(event.createdAt), "dd MMM yyyy")}
+                            {format(new Date(event.createdAt), 'dd MMM yyyy')}
                           </Typography>
                         </td>
-                        <td className="p-4 border-b border-blue-gray-50">
+                        <td className='p-4 border-b border-blue-gray-50'>
                           <Typography
-                            variant="small"
-                            color="blue-gray"
-                            className="font-normal"
+                            variant='small'
+                            color='blue-gray'
+                            className='font-normal'
                           >
                             <p>{event.proposals.length} Proposals</p>
                           </Typography>
                         </td>
 
-                        <td className="p-4 border-b border-blue-gray-50">
+                        <td className='p-4 border-b border-blue-gray-50'>
                           <Typography
-                            as="a"
-                            variant="small"
-                            color="blue-gray"
-                            className="font-medium cursor-pointer"
+                            as='a'
+                            variant='small'
+                            color='blue-gray'
+                            className='font-medium cursor-pointer'
                             onClick={() => handleEdit(event)}
                           >
-                            <div className="flex items-center gap-1">
+                            <div className='flex items-center gap-1'>
                               <MdLens
                                 className={
-                                  event.status === "Active"
-                                    ? "text-green-500 text-[7px]"
-                                    : event.status === "Expired"
-                                    ? "text-red-500 text-[7px]"
-                                    : "text-[#FAC715] text-[7px]"
+                                  event.status === 'Active'
+                                    ? 'text-green-500 text-[7px]'
+                                    : event.status === 'Expired'
+                                    ? 'text-red-500 text-[7px]'
+                                    : 'text-[#FAC715] text-[7px]'
                                 }
                               />
                               <p
                                 className={
-                                  event.status === "Active"
-                                    ? "text-green-500 "
-                                    : event.status === "Expired"
-                                    ? "text-red-500 "
-                                    : "text-[#FAC715] "
+                                  event.status === 'Active'
+                                    ? 'text-green-500 '
+                                    : event.status === 'Expired'
+                                    ? 'text-red-500 '
+                                    : 'text-[#FAC715] '
                                 }
                               >
                                 {event.status}
@@ -231,11 +235,11 @@ function Index() {
                             </div>
                           </Typography>
                         </td>
-                        <td className="p-4 border-b border-blue-gray-50">
+                        <td className='p-4 border-b border-blue-gray-50'>
                           <Typography
-                            variant="small"
-                            color="blue-gray"
-                            className="font-medium cursor-pointer"
+                            variant='small'
+                            color='blue-gray'
+                            className='font-medium cursor-pointer'
                           >
                             <Popover>
                               <PopoverHandler>
@@ -246,27 +250,27 @@ function Index() {
                               <PopoverContent>
                                 <div>
                                   <div
-                                    className="flex items-center gap-2 mb-3 cursor-pointer"
+                                    className='flex items-center gap-2 mb-3 cursor-pointer'
                                     onClick={() =>
                                       navigate(`/events/${event._id}`)
                                     }
                                   >
-                                    <MdOutlineRemoveRedEye className="text-[20px]" />
+                                    <MdOutlineRemoveRedEye className='text-[20px]' />
                                     <p>View</p>
                                   </div>
                                   <div
-                                    className="flex items-center gap-2 mb-3 cursor-pointer"
+                                    className='flex items-center gap-2 mb-3 cursor-pointer'
                                     onClick={() => handleEdit(event)}
                                   >
-                                    <MdEditNote className="text-[20px]" />
+                                    <MdEditNote className='text-[20px]' />
                                     <p>Edit</p>
                                   </div>
                                   <div
-                                    className="flex items-center gap-2 cursor-pointer text-red-500"
+                                    className='flex items-center gap-2 cursor-pointer text-red-500'
                                     // onClick={() => handleDeleteEvent(event._id)}
                                     onClick={handleOpen}
                                   >
-                                    <MdDeleteOutline className="text-[20px]" />
+                                    <MdDeleteOutline className='text-[20px]' />
                                     <p>Delete</p>
 
                                     <div>
@@ -274,46 +278,46 @@ function Index() {
                                         <Dialog
                                           open={open_01}
                                           handler={handleOpen}
-                                          size="xs"
+                                          size='xs'
                                         >
                                           <div
-                                            className="flex justify-end p-2 text-[#829ab1] cursor-pointer"
+                                            className='flex justify-end p-2 text-[#829ab1] cursor-pointer'
                                             onClick={handleOpen}
                                           >
-                                            <MdCancelPresentation className="text-[35px]" />
+                                            <MdCancelPresentation className='text-[35px]' />
                                           </div>
 
                                           <div>
-                                            <h2 className="text-[#102a43] text-[20px] sm:text-[30px] text-center mb-2">
+                                            <h2 className='text-[#102a43] text-[20px] sm:text-[30px] text-center mb-2'>
                                               Delete Event?
                                             </h2>
 
-                                            <p className="text-[#102a43] text-center text-[16px] sm:text-[20px]">
-                                              Are you sure you want to delete{" "}
+                                            <p className='text-[#102a43] text-center text-[16px] sm:text-[20px]'>
+                                              Are you sure you want to delete{' '}
                                               <br></br>
                                               {event.title}
                                             </p>
                                           </div>
 
-                                          <DialogFooter className="flex items-center justify-center gap-6 mt-4 mb-8">
+                                          <DialogFooter className='flex items-center justify-center gap-6 mt-4 mb-8'>
                                             <Button
-                                              variant="filled"
-                                              className="mr-1 bg-primary  w-[120px] h-min sm:w-[165px] sm:h-[45px] rounded-full"
+                                              variant='filled'
+                                              className='mr-1 bg-primary  w-[120px] h-min sm:w-[165px] sm:h-[45px] rounded-full'
                                               onClick={handleOpen}
                                             >
-                                              <span className="normal-case  text-[#fff] text-center ">
+                                              <span className='normal-case  text-[#fff] text-center '>
                                                 Cancel
                                               </span>
                                             </Button>
                                             <Button
-                                              variant="filled"
-                                              className="bg-[#e12929]  w-[120px] h-min sm:w-[165px] sm:h-[45px]  rounded-full"
+                                              variant='filled'
+                                              className='bg-[#e12929]  w-[120px] h-min sm:w-[165px] sm:h-[45px]  rounded-full'
                                               onClick={() =>
                                                 handleDeleteEvent(event._id)
                                               }
                                             >
-                                              <div className="flex items-center justify-center gap-2">
-                                                <span className="normal-case text-[#fff]">
+                                              <div className='flex items-center justify-center gap-2'>
+                                                <span className='normal-case text-[#fff]'>
                                                   Delete Event
                                                 </span>
                                                 {/* <MdDeleteOutline className='text-[22px]' /> */}
@@ -336,7 +340,7 @@ function Index() {
             </Card>
           )}
 
-          <div className="flex justify-end">
+          <div className='flex justify-end'>
             <Pagination
               currentPage={currentPage}
               totalItems={myEvents.length || 0}
