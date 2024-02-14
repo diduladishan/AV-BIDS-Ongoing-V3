@@ -90,6 +90,9 @@ function Index() {
           className="w-full object-scale-down"
         />
         <div className="px-0 md:px-8 lg:px-16 flex flex-col justify-center items-center md:items-start text-center md:text-left">
+          <p className="bg-[#B5F9C4] text-[#178751] font-semibold px-3 py-[1px] w-max rounded-xl mb-4">
+            Event Managers
+          </p>
           <h2 className="text-black font-extrabold text-3xl md:text-4xl lg:text-5xl xl:text-6xl leading-normal lg:leading-snug xl:leading-snug">
             Want to Get More Proposals?
           </h2>
@@ -135,6 +138,9 @@ function Index() {
 
       <section className="my-8 md:my-16 grid md:grid-cols-2 content-center rounded-lg bg-secondary mx-2 overflow-x-hidden overflow-y-hidden">
         <div className="md:px-8 lg:px-16 flex flex-col justify-center items-center md:items-start text-center md:text-left  p-8 pt-12  md:pt-8">
+          <p className="bg-[#B5F9C4] text-[#178751] font-semibold px-3 py-[1px] w-max rounded-xl mb-4">
+            AV Providers
+          </p>
           <h2 className="text-black">
             Want to Get More <span className="text-white">Clients?</span>
           </h2>
@@ -167,120 +173,120 @@ function Index() {
       </section>
 
       {/* <section className='bg-[#E2E5FA] rounded-lg p-6 '>
-        <h2 className='text-[25px] text-center text-primary mb-4'>Site Map</h2>
-        <div>
-          <div className='text-[16px] font-medium'>
-            <Link to='/event-planner'>
-              <div className='mb-2'>1_event Planner</div>
-            </Link>
-            <Link to='/av_providers'>
-              <div className='mb-2'>AV_Providers</div>
-            </Link>
-            <Link to='/3_services'>
-              <div className='mb-2'>3_services</div>
-            </Link>
-            <Link to='/4_event_categories'>
-              <div>Event Categories</div>
-            </Link>
-          </div>
-
-          <div className='text-[16px] font-medium'>
-            <Link to='/sign-up'>
-              <div className='mb-2'>sign-up</div>
-            </Link>
-            <Link to='/8_about_us'>
-              <div className='mb-2'>8_about_us</div>
-            </Link>
-            <Link to='/sign-in'>
-              <div>6_existing_users (sign in page)</div>
-            </Link>
-          </div>
-
-          <div className='text-[16px] font-medium'>
-            <Link to='/contact-us'>
-              <div className='mb-2'>contact-us</div>
-            </Link>
-            <Link to='/09_events'>
-              <div className='mb-2'>09_events</div>
-            </Link>
-            <Link to='/10_event_details_page'>
-              <div>10_event_details_page</div>
-            </Link>
-          </div>
+      <h2 className='text-[25px] text-center text-primary mb-4'>Site Map</h2>
+      <div>
+        <div className='text-[16px] font-medium'>
+          <Link to='/event-planner'>
+            <div className='mb-2'>1_event Planner</div>
+          </Link>
+          <Link to='/av_providers'>
+            <div className='mb-2'>AV_Providers</div>
+          </Link>
+          <Link to='/3_services'>
+            <div className='mb-2'>3_services</div>
+          </Link>
+          <Link to='/4_event_categories'>
+            <div>Event Categories</div>
+          </Link>
         </div>
 
-        <h2 className='text-[25px] text-center text-primary mb-4'>Dashboard</h2>
-        <div>
-          <div className='text-[16px] font-medium'>
-            <Link to='/dashboard'>
-              <div className='mb-2'>Dashboard Home</div>
-            </Link>
-
-            <Link to='/12_events'>
-              <div className='mb-2'>12_events</div>
-            </Link>
-
-            <Link to='/13_event_details_page'>
-              <div className='mb-2'>13_event_details_page</div>
-            </Link>
-            <Link to='/13_edit_event'>
-              <div className='mb-2'>13_edit_events</div>
-            </Link>
-
-            <Link to='/13_edit_event_1'>
-              <div className='mb-2'>13_edit_event_1</div>
-            </Link>
-          </div>
-
-          <div className='text-[16px] font-medium'>
-            <Link to='/13_edit_event_2'>
-              <div className='mb-2'>13_edit_event_2</div>
-            </Link>
-
-            <Link to='/13_edit_event_3'>
-              <div className='mb-2'>13_edit_event_3</div>
-            </Link>
-
-            <Link to='/13_edit_event_4'>
-              <div className='mb-2'>13_edit_event_4</div>
-            </Link>
-
-            <Link to='/13_edit_event_5'>
-              <div className='mb-2'>13_edit_event_5</div>
-            </Link>
-          </div>
-
-          <div className='text-[16px] font-medium'>
-            <Link to='/13_edit_event_6'>
-              <div className='mb-2'>13_edit_event_6</div>
-            </Link>
-
-            <Link to='/14_messages'>
-              <div className='mb-2'>14_messages</div>
-            </Link>
-
-            <Link to='/14_messages_empty'>
-              <div className='mb-2'>14_messages_empty</div>
-            </Link>
-
-            <Link to='/15_dashboard'>
-              <div className='mb-2'>15_Dashboard</div>
-            </Link>
-
-            <Link to='/17_billing'>
-              <div className='mb-2'>17_Billing</div>
-            </Link>
-
-            <Link to='/11_dashboard_add_member'>
-              <div className='mb-2'>11_dashboard_add_member</div>
-            </Link>
-
-            <Link to='/11_dashboard_delete_member'>
-              <div className='mb-2'>11_dashboard_delete_member</div>
-            </Link>
-          </div>
+        <div className='text-[16px] font-medium'>
+          <Link to='/sign-up'>
+            <div className='mb-2'>sign-up</div>
+          </Link>
+          <Link to='/8_about_us'>
+            <div className='mb-2'>8_about_us</div>
+          </Link>
+          <Link to='/sign-in'>
+            <div>6_existing_users (sign in page)</div>
+          </Link>
         </div>
-      </section> */}
+
+        <div className='text-[16px] font-medium'>
+          <Link to='/contact-us'>
+            <div className='mb-2'>contact-us</div>
+          </Link>
+          <Link to='/09_events'>
+            <div className='mb-2'>09_events</div>
+          </Link>
+          <Link to='/10_event_details_page'>
+            <div>10_event_details_page</div>
+          </Link>
+        </div>
+      </div>
+
+      <h2 className='text-[25px] text-center text-primary mb-4'>Dashboard</h2>
+      <div>
+        <div className='text-[16px] font-medium'>
+          <Link to='/dashboard'>
+            <div className='mb-2'>Dashboard Home</div>
+          </Link>
+
+          <Link to='/12_events'>
+            <div className='mb-2'>12_events</div>
+          </Link>
+
+          <Link to='/13_event_details_page'>
+            <div className='mb-2'>13_event_details_page</div>
+          </Link>
+          <Link to='/13_edit_event'>
+            <div className='mb-2'>13_edit_events</div>
+          </Link>
+
+          <Link to='/13_edit_event_1'>
+            <div className='mb-2'>13_edit_event_1</div>
+          </Link>
+        </div>
+
+        <div className='text-[16px] font-medium'>
+          <Link to='/13_edit_event_2'>
+            <div className='mb-2'>13_edit_event_2</div>
+          </Link>
+
+          <Link to='/13_edit_event_3'>
+            <div className='mb-2'>13_edit_event_3</div>
+          </Link>
+
+          <Link to='/13_edit_event_4'>
+            <div className='mb-2'>13_edit_event_4</div>
+          </Link>
+
+          <Link to='/13_edit_event_5'>
+            <div className='mb-2'>13_edit_event_5</div>
+          </Link>
+        </div>
+
+        <div className='text-[16px] font-medium'>
+          <Link to='/13_edit_event_6'>
+            <div className='mb-2'>13_edit_event_6</div>
+          </Link>
+
+          <Link to='/14_messages'>
+            <div className='mb-2'>14_messages</div>
+          </Link>
+
+          <Link to='/14_messages_empty'>
+            <div className='mb-2'>14_messages_empty</div>
+          </Link>
+
+          <Link to='/15_dashboard'>
+            <div className='mb-2'>15_Dashboard</div>
+          </Link>
+
+          <Link to='/17_billing'>
+            <div className='mb-2'>17_Billing</div>
+          </Link>
+
+          <Link to='/11_dashboard_add_member'>
+            <div className='mb-2'>11_dashboard_add_member</div>
+          </Link>
+
+          <Link to='/11_dashboard_delete_member'>
+            <div className='mb-2'>11_dashboard_delete_member</div>
+          </Link>
+        </div>
+      </div>
+    </section> */}
     </div>
   );
 }

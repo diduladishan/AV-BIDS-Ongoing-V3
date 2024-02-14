@@ -4,6 +4,7 @@ import eventCategories from "../../assets/4_event_categories/event_categories_01
 import eventCategories_02 from "../../assets/4_event_categories/event_categories_02.png";
 import { MdArrowForward } from "react-icons/md";
 import { MdEast } from "react-icons/md";
+import { MdBrightness1 } from "react-icons/md";
 import { Link } from "react-router-dom";
 
 function index() {
@@ -33,87 +34,91 @@ function index() {
                 <div className="sm:flex gap-8 sm:mb-6  items-center justify-center">
                   <div>
                     <div className="flex items-center gap-2 mb-2">
-                      <MdEast className="text-purple_two mb-0.5" />
-                      <p>Awards</p>
+                      <MdBrightness1 className="text-purple_two mb-0.5 text-[8px]" />
+                      <p className="font-bold text-[#000]">Awards</p>
                     </div>
                     <div className="flex items-center gap-2 mb-2">
-                      <MdEast className="text-purple_two mb-0.5" />
-                      <p>Banquet</p>
+                      <MdBrightness1 className="text-purple_two mb-0.5 text-[8px]" />
+                      <p className="font-bold text-[#000]">Banquet</p>
                     </div>
                     <div className="flex items-center gap-2 mb-2">
-                      <MdEast className="text-purple_two mb-0.5" />
-                      <p>Board Meeting</p>
+                      <MdBrightness1 className="text-purple_two mb-0.5 text-[8px]" />
+                      <p className="font-bold text-[#000]">Board Meeting</p>
                     </div>
                     <div className="flex items-center gap-2 mb-2">
-                      <MdEast className="text-purple_two mb-0.5" />
-                      <p>Breakout Session</p>
+                      <MdBrightness1 className="text-purple_two mb-0.5 text-[8px]" />
+                      <p className="font-bold text-[#000]">Breakout Session</p>
                     </div>
                     <div className="flex items-center gap-2 mb-2">
-                      <MdEast className="text-purple_two mb-0.5" />
-                      <p>Conference</p>
+                      <MdBrightness1 className="text-purple_two mb-0.5 text-[8px]" />
+                      <p className="font-bold text-[#000]">Conference</p>
                     </div>
                     <div className="flex items-center gap-2 mb-2">
-                      <MdEast className="text-purple_two mb-0.5" />
-                      <p>Congress</p>
+                      <MdBrightness1 className="text-purple_two mb-0.5 text-[8px]" />
+                      <p className="font-bold text-[#000]">Congress</p>
                     </div>
                     <div className="flex items-center gap-2 mb-2">
-                      <MdEast className="text-purple_two mb-0.5" />
-                      <p>Consumer Trade </p>
+                      <MdBrightness1 className="text-purple_two mb-0.5 text-[8px]" />
+                      <p className="font-bold text-[#000]">Consumer Trade </p>
                     </div>
                   </div>
                   <div className="">
                     <div className="flex items-center gap-2 mb-2">
-                      <MdEast className="text-purple_two mb-0.5" />
-                      <p>Holiday Party</p>
+                      <MdBrightness1 className="text-purple_two mb-0.5 text-[8px]" />
+                      <p className="font-bold text-[#000]">Holiday Party</p>
                     </div>
                     <div className="flex items-center gap-2 mb-2">
-                      <MdEast className="text-purple_two mb-0.5" />
-                      <p>
+                      <MdBrightness1 className="text-purple_two mb-0.5 text-[8px]" />
+                      <p className="font-bold text-[#000]">
                         Industry and Consumer <br></br>Trade Show
                       </p>
                     </div>
                     <div className="flex items-center gap-2 mb-2">
-                      <MdEast className="text-purple_two mb-0.5" />
-                      <p>Industry Trade Show</p>
+                      <MdBrightness1 className="text-purple_two mb-0.5 text-[8px]" />
+                      <p className="font-bold text-[#000]">
+                        Industry Trade Show
+                      </p>
                     </div>
                     <div className="flex items-center gap-2 mb-2">
-                      <MdEast className="text-purple_two mb-0.5" />
-                      <p>International Meeting</p>
+                      <MdBrightness1 className="text-purple_two mb-0.5 text-[8px]" />
+                      <p className="font-bold text-[#000]">
+                        International Meeting
+                      </p>
                     </div>
                     <div className="flex items-center gap-2 mb-2">
-                      <MdEast className="text-purple_two mb-0.5" />
-                      <p>Networking</p>
+                      <MdBrightness1 className="text-purple_two mb-0.5 text-[8px]" />
+                      <p className="font-bold text-[#000]">Networking</p>
                     </div>
                     <div className="flex items-center gap-2 mb-2">
-                      <MdEast className="text-purple_two mb-0.5" />
-                      <p>Plenary General </p>
+                      <MdBrightness1 className="text-purple_two mb-0.5 text-[8px]" />
+                      <p className="font-bold text-[#000]">Plenary General </p>
                     </div>
                   </div>
                 </div>
                 <div>
                   <div className="flex items-center gap-2 mb-2">
-                    <MdEast className="text-purple_two mb-0.5" />
-                    <p>Product Launch</p>
+                    <MdBrightness1 className="text-purple_two mb-0.5 text-[8px]" />
+                    <p className="font-bold text-[#000]">Product Launch</p>
                   </div>
                   <div className="flex items-center gap-2 mb-2">
-                    <MdEast className="text-purple_two mb-0.5" />
-                    <p>Reception</p>
+                    <MdBrightness1 className="text-purple_two mb-0.5 text-[8px]" />
+                    <p className="font-bold text-[#000]">Reception</p>
                   </div>
                   <div className="flex items-center gap-2 mb-2">
-                    <MdEast className="text-purple_two mb-0.5" />
-                    <p>Retreat</p>
+                    <MdBrightness1 className="text-purple_two mb-0.5 text-[8px]" />
+                    <p className="font-bold text-[#000]">Retreat</p>
                   </div>
                   <div className="flex items-center gap-2 mb-2">
-                    <MdEast className="text-purple_two mb-0.5" />
-                    <p>Seminar</p>
+                    <MdBrightness1 className="text-purple_two mb-0.5 text-[8px]" />
+                    <p className="font-bold text-[#000]">Seminar</p>
                   </div>
                   <div className="flex items-center gap-2 mb-2">
-                    <MdEast className="text-purple_two mb-0.5" />
-                    <p>Workshop</p>
+                    <MdBrightness1 className="text-purple_two mb-0.5 text-[8px]" />
+                    <p className="font-bold text-[#000]">Workshop</p>
                   </div>
                   <div className="flex items-center gap-2 mb-2">
-                    <MdEast className="text-purple_two mb-0.5" />
-                    <p>Press </p>
+                    <MdBrightness1 className="text-purple_two mb-0.5 text-[8px]" />
+                    <p className="font-bold text-[#000]">Press </p>
                   </div>
 
                   <div className="flex items-center justify-center sm:justify-start">
@@ -171,55 +176,57 @@ function index() {
                 <div className="sm:flex items-center gap-8 ">
                   <div>
                     <div className="flex items-center gap-2 mb-2">
-                      <MdEast className="text-purple_two mb-0.5" />
-                      <p>Charity Event </p>
+                      <MdBrightness1 className="text-purple_two mb-0.5 text-[8px]" />
+                      <p className="font-bold text-[#000]">Charity Event </p>
                     </div>
 
                     <div className="flex items-center gap-2 mb-2">
-                      <MdEast className="text-purple_two mb-0.5" />
-                      <p>Exhibition </p>
+                      <MdBrightness1 className="text-purple_two mb-0.5 text-[8px]" />
+                      <p className="font-bold text-[#000]">Exhibition </p>
                     </div>
 
                     <div className="flex items-center gap-2 mb-2">
-                      <MdEast className="text-purple_two mb-0.5" />
-                      <p>Fashion Show </p>
+                      <MdBrightness1 className="text-purple_two mb-0.5 text-[8px]" />
+                      <p className="font-bold text-[#000]">Fashion Show </p>
                     </div>
 
                     <div className="flex items-center gap-2 mb-2">
-                      <MdEast className="text-purple_two mb-0.5" />
-                      <p>Festival</p>
+                      <MdBrightness1 className="text-purple_two mb-0.5 text-[8px]" />
+                      <p className="font-bold text-[#000]">Festival</p>
                     </div>
 
                     <div className="flex items-center gap-2 mb-2">
-                      <MdEast className="text-purple_two mb-0.5" />
-                      <p>Function </p>
+                      <MdBrightness1 className="text-purple_two mb-0.5 text-[8px]" />
+                      <p className="font-bold text-[#000]">Function </p>
                     </div>
                   </div>
 
                   <div>
                     <div className="flex items-center gap-2 mb-2">
-                      <MdEast className="text-purple_two mb-0.5" />
-                      <p>Fundraiser </p>
+                      <MdBrightness1 className="text-purple_two mb-0.5 text-[8px]" />
+                      <p className="font-bold text-[#000]">Fundraiser </p>
                     </div>
 
                     <div className="flex items-center gap-2 mb-2">
-                      <MdEast className="text-purple_two mb-0.5" />
-                      <p>Meetups </p>
+                      <MdBrightness1 className="text-purple_two mb-0.5 text-[8px]" />
+                      <p className="font-bold text-[#000]">Meetups </p>
                     </div>
 
                     <div className="flex items-center gap-2 mb-2">
-                      <MdEast className="text-purple_two mb-0.5" />
-                      <p>Sports/Competition </p>
+                      <MdBrightness1 className="text-purple_two mb-0.5 text-[8px]" />
+                      <p className="font-bold text-[#000]">
+                        Sports/Competition{" "}
+                      </p>
                     </div>
 
                     <div className="flex items-center gap-2 mb-2">
-                      <MdEast className="text-purple_two mb-0.5" />
-                      <p>Wedding </p>
+                      <MdBrightness1 className="text-purple_two mb-0.5 text-[8px]" />
+                      <p className="font-bold text-[#000]">Wedding </p>
                     </div>
 
                     <div className="flex items-center gap-2 mb-2">
-                      <MdEast className="text-purple_two mb-0.5" />
-                      <p>Worship Service</p>
+                      <MdBrightness1 className="text-purple_two mb-0.5 text-[8px]" />
+                      <p className="font-bold text-[#000]">Worship Service</p>
                     </div>
                   </div>
                 </div>

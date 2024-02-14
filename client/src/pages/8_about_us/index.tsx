@@ -23,7 +23,7 @@ function index() {
             <div>
               <h2 className="text-primary text-[30px] mb-6 text-center sm:text-left leading-[3rem]">
                 AV Bids was created to address one industry problem:
-                communication
+                <span className="text-[#5912FF]"> communication</span>
               </h2>
               <p className="text-center sm:text-left mb-4 sm:mb-0">
                 AV companies should not have to cold call and email for new
@@ -63,7 +63,7 @@ function index() {
           </div>
         </div>
       </section>
-
+      {/* 
       <section className="mb-8 mx-4">
         <div className="flex justify-center items-center bg-primary text-white rounded-lg px-2 py-8 text-center">
           <div className="grid grid-cols-1 sm:grid-cols-4 w-full ">
@@ -94,7 +94,7 @@ function index() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section className="bg-purple_two px-6 py-16 rounded-3xl mb-12 mx-4">
         <div className="flex items-center justify-center sm:justify-start">

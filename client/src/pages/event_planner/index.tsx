@@ -20,8 +20,10 @@ function Index() {
               For Event Planners
             </p>
           </div>
-          <h2 className="text-primary">Why post your events on AV Bids?</h2>
-          <p className="text-[#353535] my-4">
+          <h2 className="text-[#000] font-extrabold">
+            Why post your events on AV Bids?
+          </h2>
+          <p className="text-[#000] font-bold my-4">
             We are a unique listing site that is specific to the events
             industry. We created a platform that connects av providers to event
             managers to not only get a fairer quote, but to network and develop
@@ -35,7 +37,7 @@ function Index() {
                 alt="Done icon for paragraphs"
                 className="w-[20px] object-contain"
               />
-              <p className="text-[#353535] text-left">
+              <p className="text-[#fff] text-left font-medium">
                 Always free for event managers to post events
               </p>
             </div>
@@ -46,7 +48,7 @@ function Index() {
                 alt="Done icon for paragraphs"
                 className="w-[20px] object-contain"
               />
-              <p className="text-[#353535] text-left">
+              <p className="text-[#fff] text-left font-medium">
                 Add up to two members for your organization for free
               </p>
             </div>
@@ -57,8 +59,8 @@ function Index() {
                 alt="Done icon for paragraphs"
                 className="w-[20px] object-contain"
               />
-              <p className="text-[#353535] text-left">
-                Chat with and check portfolios of av companies you want to work
+              <p className="text-[#fff] text-left font-medium">
+                Chat with and check portfolios of av providers you want to work
                 with
               </p>
             </div>
