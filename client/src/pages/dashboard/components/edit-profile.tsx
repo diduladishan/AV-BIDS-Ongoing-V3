@@ -160,7 +160,7 @@ const EditProfile: FC<EditProfileProps> = ({ user }) => {
                   }}
                   containerProps={{ className: "min-w-[100px]" }}
                   crossOrigin=""
-                  placeholder="John Smith"
+                  placeholder="Enter first name"
                   {...register("firstName")}
                 />
               </div>
@@ -176,7 +176,7 @@ const EditProfile: FC<EditProfileProps> = ({ user }) => {
                   className: "hidden",
                 }}
                 containerProps={{ className: "min-w-[100px]" }}
-                placeholder="Smith"
+                placeholder="Enter last name"
                 crossOrigin=""
                 {...register("lastName")}
               />
@@ -193,6 +193,7 @@ const EditProfile: FC<EditProfileProps> = ({ user }) => {
                     className: "hidden",
                   }}
                   containerProps={{ className: "min-w-[100px]" }}
+                  placeholder="Enter email"
                   label="Username"
                   crossOrigin=""
                   {...register("email")}
@@ -210,7 +211,7 @@ const EditProfile: FC<EditProfileProps> = ({ user }) => {
                     className: "hidden",
                   }}
                   containerProps={{ className: "min-w-[100px]" }}
-                  placeholder="Anita Meetings LLC"
+                  placeholder="Enter company"
                   crossOrigin=""
                   {...register("company")}
                 />
@@ -229,7 +230,7 @@ const EditProfile: FC<EditProfileProps> = ({ user }) => {
                     className: "hidden",
                   }}
                   containerProps={{ className: "min-w-[100px]" }}
-                  placeholder="+880 01723801729"
+                  placeholder="enter phone number"
                   crossOrigin=""
                   {...register("phone")}
                 />
@@ -246,7 +247,7 @@ const EditProfile: FC<EditProfileProps> = ({ user }) => {
                     className: "hidden",
                   }}
                   containerProps={{ className: "min-w-[100px]" }}
-                  placeholder="www.anitameetings.com"
+                  placeholder="Enter url"
                   crossOrigin=""
                   {...register("website")}
                 />
