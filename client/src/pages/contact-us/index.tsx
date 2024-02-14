@@ -62,7 +62,7 @@ function Index() {
             </p>
           </div>
           <h2 className="text-primary mb-3">Get in touch today</h2>
-          <p className="text-primary_font_color px-4">
+          <p className="text-primary_font_color ">
             Let us know how we can help or answer any questions. We would love
             to hear feedback about the site as well so we can make the user
             experience better.
@@ -133,7 +133,7 @@ function Index() {
                       Name
                     </Typography>
                     <Input
-                      placeholder="Name"
+                      placeholder="Enter Name"
                       className=" !border-t-blue-gray-200 focus:!border-t-gray-900 bg-white rounded-full"
                       labelProps={{
                         className: "before:content-none after:content-none",
@@ -142,10 +142,10 @@ function Index() {
                       {...register("name")}
                     />
                     <Typography variant="h6" color="blue-gray" className="mt-3">
-                      Email
+                      Email<span className="text-[#DE5753]">*</span>
                     </Typography>
                     <Input
-                      placeholder="example@email.com"
+                      placeholder="Enter Email"
                       className=" !border-t-blue-gray-200 focus:!border-t-gray-900 bg-white rounded-full"
                       labelProps={{
                         className: "before:content-none after:content-none",
@@ -158,7 +158,7 @@ function Index() {
                     </Typography>
                     <Input
                       type="tel"
-                      placeholder="(123) 456-789"
+                      placeholder="Enter Phone Number"
                       className=" !border-t-blue-gray-200 focus:!border-t-gray-900 bg-white rounded-full"
                       labelProps={{
                         className: "before:content-none after:content-none",
@@ -173,7 +173,7 @@ function Index() {
                     color="blue-gray"
                     className="mt-5 mb-2"
                   >
-                    Subject
+                    Subject<span className="text-[#DE5753]">*</span>
                   </Typography>
                   <div className="border-none">
                     <Select
@@ -198,7 +198,7 @@ function Index() {
                     color="blue-gray"
                     className="mt-5 mb-2"
                   >
-                    Message
+                    Message<span className="text-[#DE5753]">*</span>
                   </Typography>
                   <div className="">
                     <Textarea
