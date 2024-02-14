@@ -9,7 +9,7 @@ import {
   MdOutlineCalendarMonth,
   MdBrightness1,
 } from "react-icons/md";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Slider, { Settings } from "react-slick";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
@@ -394,9 +394,11 @@ const Carousel: React.FC<CarouselProps> = ({ data }) => {
         </div>
         <div className="relative">
           <div className="flex items-center justify-center absolute top-[50%] right-[50%]">
-            <p className="text-[#957FEF] underline font-bold text-[18px] cursor-pointer">
-              See More
-            </p>
+            <Link to="/events">
+              <p className="text-[#957FEF] underline font-bold text-[18px] cursor-pointer">
+                See More
+              </p>
+            </Link>
           </div>
         </div>
       </div>
