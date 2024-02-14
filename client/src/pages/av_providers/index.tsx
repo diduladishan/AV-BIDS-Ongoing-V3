@@ -32,7 +32,7 @@ function index() {
               <p className="text-[#fff] my-4 text-center sm:text-left ">
                 We offer a unique listing site that is specific to the events
                 industry. We wanted to create a platform that connects av
-                providers to event planners to help companies get new clients
+                providers to event managers to help companies get new clients
                 without having to cold call.
               </p>
               <div className=" mb-8">
@@ -42,8 +42,8 @@ function index() {
                   </div>
 
                   <p className="mb-8  text-[#fff] text-left">
-                    Browse event listings that actively need proposals and
-                    simply submit yours.
+                    Browse events that actively need proposals and simply submit
+                    yours
                   </p>
                 </div>
 
@@ -61,16 +61,17 @@ function index() {
                     <MdCheckCircle className="text-[#42D27A] text-[21px]" />
                   </div>
                   <p className="mb-0 text-[#fff] text-left">
-                    Chat with event planners and send invoices all from our site
+                    Chat with event managers and request event information all
+                    from our site
                   </p>
                 </div>
               </div>
 
               <div className="flex items-center justify-center sm:justify-start">
                 <Link to="/sign-in">
-                  <button className="flex items-center bg-[#8645FF] text-white rounded-full py-2 px-4 text-center font-semibold text-lg hover:bg-[#8645FF] focus:outline-none focus:ring-2 focus:ring-[#8645FF] ">
+                  <button className="flex items-center bg-[#8645FF] text-white rounded-full py-2 px-8 text-center font-semibold text-lg hover:bg-[#8645FF] focus:outline-none focus:ring-2 focus:ring-[#8645FF]">
                     Get Started
-                    <MdArrowForward size={24} className="text-[#fff] ml-4" />
+                    {/* <MdArrowForward size={24} className="text-[#fff] ml-4" /> */}
                   </button>
                 </Link>
               </div>
@@ -205,7 +206,7 @@ function index() {
             </h2>
             <p className="text-center text-sm text-[#fff] mb-8">
               This visual aid represents the time and resources saved using AV
-              Bids
+              Bids*
             </p>
 
             <div className="flex justify-center items-center mb-8">
@@ -252,7 +253,7 @@ function index() {
             </div>
 
             <div className="sm:flex justify-center items-center gap-6">
-              <div className="mb-6 sm:mb-0">
+              {/* <div className="mb-6 sm:mb-0">
                 <Button
                   variant="outlined"
                   size="sm"
@@ -262,16 +263,19 @@ function index() {
                     Client Acquisitions averages
                   </span>
                 </Button>
-              </div>
+              </div> */}
               <div className="flex items-center justify-center">
                 <Link to="/sign-in">
-                  <button className="flex items-center bg-[#8645FF] text-[20px] text-white rounded-full py-2 px-4 text-center font-semibold text-lg hover:bg-[#8645FF] focus:outline-none focus:ring-2 focus:ring-[#8645FF] ">
+                  <button className="flex items-center bg-[#8645FF] text-[20px] text-white rounded-full py-2 px-8 text-center font-semibold text-lg hover:bg-[#8645FF] focus:outline-none focus:ring-2 focus:ring-[#8645FF] ">
                     <span className="text-[13px]">Get Started</span>
-                    <MdArrowForward size={24} className="text-[#fff] ml-4" />
+                    {/* <MdArrowForward size={24} className="text-[#fff] ml-4" /> */}
                   </button>
                 </Link>
               </div>
             </div>
+            <p className="text-[#fff] text-center text-[15px] mt-6 font-regular">
+              *Client Acquisitions averages
+            </p>
           </div>
         </section>
       </div>
