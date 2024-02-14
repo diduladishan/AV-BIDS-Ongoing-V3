@@ -34,7 +34,7 @@ export function NavbarDashboard() {
     <ul className="flex justify-center flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
       <div className="hidden sm:block">
         <Link to="/events">
-          <p className="text-white">Events Page</p>
+          <p className="text-black font-bold">Events</p>
         </Link>
       </div>
 
@@ -55,8 +55,8 @@ export function NavbarDashboard() {
           className="flex items-center justify-center gap-2 border border-white w-max px-2 py-1 rounded-lg block sm:hidden ml-8"
           onClick={() => navigate("/events/new")}
         >
-          <MdAddCircleOutline className="text-[18px] text-white" />
-          <span className="text-white normal-case text-[12px]">
+          <MdAddCircleOutline className="text-[18px] text-black" />
+          <span className="text-black normal-case text-[12px]">
             Post New Event
           </span>
         </div>
@@ -67,7 +67,7 @@ export function NavbarDashboard() {
   return (
     <div>
       <div className="w-full">
-        <Navbar className="mx-auto max-w-screen-xl p-2 lg:pl-6 bg-[#957FEF] shadow-none border-none sm:py-4">
+        <Navbar className="mx-auto max-w-screen-xl p-2 lg:pl-6 bg-[#f7f6fd] shadow-none border-none sm:py-4">
           <div className="relative mx-auto flex items-center justify-between text-blue-gray-900">
             {user && user?.userType === "PLANNER" && (
               // <Button
@@ -90,11 +90,11 @@ export function NavbarDashboard() {
 
               <div className="hidden lg:block">
                 <div
-                  className="flex items-center justify-center gap-2 border border-white w-max px-2 py-1 rounded-lg cursor-pointer"
+                  className="flex items-center justify-center gap-2 border border-black w-max px-2 py-1 rounded-lg cursor-pointer"
                   onClick={() => navigate("/events/new")}
                 >
-                  <MdAddCircleOutline className="text-[18px] sm:text-[20px] text-white text-center" />
-                  <span className="text-white normal-case text-[12px] sm:text-[16px]">
+                  <MdAddCircleOutline className="text-[18px] sm:text-[20px] text-black text-center" />
+                  <span className="text-black normal-case text-[12px] sm:text-[16px]">
                     Post New Event
                   </span>
                 </div>
