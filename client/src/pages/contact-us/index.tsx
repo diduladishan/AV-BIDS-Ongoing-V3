@@ -133,7 +133,7 @@ function Index() {
                       Name
                     </Typography>
                     <Input
-                      placeholder="Enter Name"
+                      placeholder="Enter first and last name"
                       className=" !border-t-blue-gray-200 focus:!border-t-gray-900 bg-white rounded-full"
                       labelProps={{
                         className: "before:content-none after:content-none",
@@ -145,7 +145,7 @@ function Index() {
                       Email<span className="text-[#DE5753]">*</span>
                     </Typography>
                     <Input
-                      placeholder="Enter Email"
+                      placeholder="Enter email"
                       className=" !border-t-blue-gray-200 focus:!border-t-gray-900 bg-white rounded-full"
                       labelProps={{
                         className: "before:content-none after:content-none",
@@ -158,7 +158,7 @@ function Index() {
                     </Typography>
                     <Input
                       type="tel"
-                      placeholder="Enter Phone Number"
+                      placeholder="Enter phone number"
                       className=" !border-t-blue-gray-200 focus:!border-t-gray-900 bg-white rounded-full"
                       labelProps={{
                         className: "before:content-none after:content-none",
