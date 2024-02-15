@@ -16,7 +16,7 @@ const HomeLayout = () => {
     <>
       <main className="w-full h-screen overflow-auto bg-[#f7f6fd]">
         {/* <main className="w-full h-screen  bg-[#f7f6fd]"> */}
-        <div className="bg-[#957FEF] mb-2  fixed top-0 w-full z-50">
+        <div className="bg-[#f7f6fd] mb-2  fixed top-0 w-full z-50">
           <NavbarDashboard />
         </div>
 
