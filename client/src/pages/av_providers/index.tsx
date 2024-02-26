@@ -100,8 +100,8 @@ function index() {
         <div>
           <h2 className="text-primary text-center mb-4">How to get started?</h2>
           <div className="font-poppins font-normal text-[#353535] text-center mb-8">
-            We make it simple and easy to start getting more proposals sent to
-            you without having to reach out independently yourself
+            We make it simple and easy to start getting more business without
+            having to spend time and resources on your own
           </div>
 
           <div>
