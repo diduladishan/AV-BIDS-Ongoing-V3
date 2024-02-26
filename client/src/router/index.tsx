@@ -191,6 +191,13 @@ function Router() {
       routes: [{ element: lazy(() => import("../pages/privacy_policy")) }],
     },
 
+    {
+      path: "/terms_of_service",
+      layout: HomeLayout2,
+
+      routes: [{ element: lazy(() => import("../pages/terms_of_service")) }],
+    },
+
     { path: "*", element: lazy(() => import("./404")) },
   ];
 

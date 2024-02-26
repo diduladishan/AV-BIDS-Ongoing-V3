@@ -36,7 +36,7 @@ export function AccordionCustomIcon() {
       <Accordion open={open === 1} icon={<Icon id={1} open={String(open)} />}>
         <AccordionHeader onClick={() => handleOpen(1)}>
           <p className="text-[#000000] font-semibold text-[18px]">
-            What type of events can I post?
+            What benefit does AV Bids provide?
           </p>
         </AccordionHeader>
         <AccordionBody>
@@ -52,32 +52,30 @@ export function AccordionCustomIcon() {
       <Accordion open={open === 2} icon={<Icon id={2} open={String(open)} />}>
         <AccordionHeader onClick={() => handleOpen(2)}>
           <p className="text-[#000000] font-semibold text-[18px]">
-            How does AV Bids make money?
+            Can I join for free as an av provider?
           </p>
         </AccordionHeader>
         <AccordionBody>
           <p className="text-[16px] text-[#353535]">
-            Any and all event types! Start with corporate, non-corporate,
-            in-person, virtual, or hybrid. Choose from our categories when
-            posting a new event or simply fill in the “Other” section if you do
-            not see your event category. Feel free to reach out if you think we
-            should add a category.
+            It’s free to join however it defaults as a trial period, lasting
+            only three days before a membership is required. During this trial
+            period you can browse the events page but will not be able to submit
+            proposals or connect with event planners.
           </p>
         </AccordionBody>
       </Accordion>
       <Accordion open={open === 3} icon={<Icon id={3} open={String(open)} />}>
         <AccordionHeader onClick={() => handleOpen(3)}>
           <p className="text-[#000000] font-semibold text-[18px]">
-            What if I need help getting started?
+            What type of events do event managers post?
           </p>
         </AccordionHeader>
         <AccordionBody>
           <p className="text-[16px] text-[#353535]">
-            Any and all event types! Start with corporate, non-corporate,
-            in-person, virtual, or hybrid. Choose from our categories when
-            posting a new event or simply fill in the “Other” section if you do
-            not see your event category. Feel free to reach out if you think we
-            should add a category.
+            Our platform is meant for any and all types of events. Corporate,
+            non-corporate, in-person, virtual, or hybrid. Check our “Event
+            Categories” page to see our current options for events. We always
+            try to keep them updated based on our event managers feedback.
           </p>
         </AccordionBody>
       </Accordion>
