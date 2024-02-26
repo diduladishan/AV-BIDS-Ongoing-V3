@@ -5,7 +5,7 @@ const currentYear = new Date().getFullYear();
 
 export function Footer() {
   return (
-    <footer className="relative w-full p-8 bg-[#151045] text-white">
+    <footer className="relative w-full px-8 py-16 bg-[#151045] text-white">
       <div className="mx-auto w-full max-w-7xl px-8">
         <div></div>
 
@@ -38,11 +38,19 @@ export function Footer() {
 
         <div className="grid sm:grid-cols-3 md:grid-cols-5 gap-8 mb-4">
           <div className="mb-8 sm:col-span-3 md:col-span-2 sm:place-self-start ">
-            <img src={LOGO} alt="" className="mx-auto w-[220px]" />
+            <img src={LOGO} alt="" className="w-[140px]" />
 
-            <p className="text-sm text-center mt-4 sm:mb-8 md:mb-0">
+            <p className="text-sm mt-4 sm:mb-8 md:mb-0">
               All Rights Reserved - {currentYear}
             </p>
+
+            <Link to="/terms_of_service">
+              <p className="text-sm mt-4 sm:mb-8 md:mb-0">Terms of Service</p>
+            </Link>
+
+            <Link to="/privacy_policy">
+              <p className="text-sm mt-4 sm:mb-8 md:mb-0">Privacy Policy</p>
+            </Link>
           </div>
 
           <div className="mb-6 text-center">
@@ -110,12 +118,6 @@ export function Footer() {
               </p>
             </Link>
           </div>
-        </div>
-
-        <div className="flex w-full flex-col items-center justify-center py-4 sm:flex-row md:justify-end gap-4">
-          <p>Terms of Conditions</p>
-          <p>Privacy</p>
-          <p>Cookies</p>
         </div>
       </div>
     </footer>
