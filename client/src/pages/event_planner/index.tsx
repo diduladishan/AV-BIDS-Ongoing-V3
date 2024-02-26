@@ -1,6 +1,6 @@
 import React from "react";
 import { Button } from "@material-tailwind/react";
-import Event_main_img from "../../assets/event planner/Add User-rafiki 1.png";
+import Event_main_img from "../../assets/event planner/Add User-rafiki 1 new.png";
 import Create_account from "../../assets/event planner/create your account.png";
 import Post_event from "../../assets/event planner/post an event.png";
 import Choose_proposal from "../../assets/event planner/choose the best proposal.png";
@@ -17,7 +17,7 @@ function Index() {
         <div className="md:px-8 lg:px-16 flex flex-col justify-center items-center md:items-start text-center md:text-left  p-8 pt-12  md:pt-8">
           <div className="bg-[#B5F9C4] rounded-full mb-4">
             <p className="text-[#178751] font-semibold px-4 py-1.5 text-center">
-              For Event Planners
+              For Event Managers
             </p>
           </div>
           <h2 className="text-[#000] font-extrabold">
@@ -82,7 +82,7 @@ function Index() {
           <img
             src={Event_main_img}
             alt="Event planner main img"
-            className="w-[600px] object-scale-down"
+            className="w-[600px] py-12 object-scale-down"
           />
         </div>
       </section>
@@ -98,7 +98,7 @@ function Index() {
           </div>
 
           <div>
-            <h2 className="text-primary text-center mb-4 text-[#353535]">
+            <h2 className=" text-center mb-4 text-[#181059]">
               How to get started?
             </h2>
             <div className="font-poppins font-normal text-[#353535] text-center mb-8 mx-4 sm:mx-0">
@@ -108,19 +108,19 @@ function Index() {
 
             <div>
               <div className="grid md:grid-cols-3 gap-8  px-4 sm:px-8">
-                <div className="bg-[#F3F1FB] rounded-xl">
+                <div className="bg-[#F3F1FB] rounded-xl py-8">
                   <div className="">
                     <div className="flex justify-center align-items">
                       <img
                         src={Create_account}
                         alt="Create your account img"
-                        className="w-full object-scale-down"
+                        className="w-[330px]"
                       />
                     </div>
                     <div className="text-center font-poppins font-bold text-[23px] text-[#000000] mb-4">
                       create your account
                     </div>
-                    <div className="text-center font-poppins font-normal  text-[#353535] p-4 sm:p-6 pt-0">
+                    <div className="text-center font-poppins font-normal  text-[#353535] p-4 px-8 pt-0">
                       Add as much detail about you or your organization as you
                       want. You can even add additional members who will have
                       access to your account.
@@ -128,18 +128,18 @@ function Index() {
                   </div>
                 </div>
 
-                <div className="bg-[#F3F1FB] rounded-xl">
+                <div className="bg-[#F3F1FB] rounded-xl py-8">
                   <div className="flex justify-center align-items">
                     <img
                       src={Post_event}
                       alt="post an event img"
-                      className="w-full object-scale-down"
+                      className="w-[330px]"
                     />
                   </div>
                   <div className="text-center font-poppins font-bold text-[23px] text-[#000000] mb-4">
                     Post an event
                   </div>
-                  <div className="text-center font-poppins font-normal  text-[#353535] p-4 pt-0">
+                  <div className="text-center font-poppins font-normal  text-[#353535] p-4 px-8 pt-0">
                     Put in as much info about your event as you wish. We offer a
                     variety of input boxes about your event. If we are missing
                     anything or you already your event info on a document, you
@@ -147,18 +147,18 @@ function Index() {
                   </div>
                 </div>
 
-                <div className="bg-[#F3F1FB] rounded-xl">
+                <div className="bg-[#F3F1FB] rounded-xl py-8">
                   <div className="flex justify-center align-items">
                     <img
                       src={Choose_proposal}
                       alt="choose proposal img"
-                      className="w-full object-scale-down"
+                      className="w-[330px]"
                     />
                   </div>
-                  <div className="text-center font-poppins font-bold text-[23px] text-[#000000] mb-4 p-2">
+                  <div className="text-center font-poppins font-bold text-[23px] text-[#000000] mb-4">
                     Choose the best proposal
                   </div>
-                  <div className="text-center font-poppins font-normal  text-[#353535] p-4 pt-0">
+                  <div className="text-center font-poppins font-normal  text-[#353535] p-4 px-8 pt-0">
                     After you post you event, you can expect multiple proposals
                     to be submit to you. From here you can determine if you want
                     the lowest bid or best value.

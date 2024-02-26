@@ -144,7 +144,7 @@ function Index() {
           <h2 className="text-black">
             Want to Get More <span className="text-white">Clients?</span>
           </h2>
-          <p className="text-white mt-4 mb-3">
+          <p className="text-white mt-4 mb-3 font-light">
             Browse the events listing page, and submit your proposal. No more
             cold calling or emailing for new clients.
           </p>

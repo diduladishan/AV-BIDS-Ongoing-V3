@@ -57,11 +57,9 @@ export function AccordionCustomIcon() {
         </AccordionHeader>
         <AccordionBody>
           <p className="text-[16px] text-[#353535]">
-            Any and all event types! Start with corporate, non-corporate,
-            in-person, virtual, or hybrid. Choose from our categories when
-            posting a new event or simply fill in the “Other” section if you do
-            not see your event category. Feel free to reach out if you think we
-            should add a category.
+            We charge a monthly subscription fee to av providers to use the
+            site. For event managers it’s always free to post events, you can
+            even add up to three members to your organization for free.
           </p>
         </AccordionBody>
       </Accordion>
@@ -73,11 +71,11 @@ export function AccordionCustomIcon() {
         </AccordionHeader>
         <AccordionBody>
           <p className="text-[16px] text-[#353535]">
-            Any and all event types! Start with corporate, non-corporate,
-            in-person, virtual, or hybrid. Choose from our categories when
-            posting a new event or simply fill in the “Other” section if you do
-            not see your event category. Feel free to reach out if you think we
-            should add a category.
+            Whether you need help posting a new event or simply need guidance on
+            what you’ll need for your event, you can always give us a call and
+            we’d be happy to help guide you. Click on our Contact Us page to get
+            started. You can also click on our Services page to see what
+            services AV Bids currently has to offer in-house.
           </p>
         </AccordionBody>
       </Accordion>
