@@ -132,10 +132,10 @@ function index() {
                           <p className="text-white normal-case font-semibold text-[12px] sm:text-[14px]">
                             View Corporate Events
                           </p>
-                          <MdArrowForward
+                          {/* <MdArrowForward
                             size={20}
                             className="text-[#fff] ml-4"
-                          />
+                          /> */}
                         </div>
                       </Button>
                     </Link>
@@ -242,10 +242,10 @@ function index() {
                         <p className="text-white normal-case font-semibold text-[12px] sm:text-[14px]">
                           View Non-Corporate Events
                         </p>
-                        <MdArrowForward
+                        {/* <MdArrowForward
                           size={20}
                           className="text-[#fff] ml-4"
-                        />
+                        /> */}
                       </div>
                     </Button>
                   </div>
