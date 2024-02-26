@@ -163,12 +163,6 @@ function Router() {
       ],
     },
 
-    {
-      path: "/21_billing_new",
-      layout: HomeLayout2,
-      guard: RequireAuth,
-      routes: [{ element: lazy(() => import("../pages/21_billing_new")) }],
-    },
 
     {
       path: "/forgot_password",

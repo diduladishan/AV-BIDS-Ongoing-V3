@@ -204,13 +204,20 @@ const updateStripeCustomer = async (req, res) => {
 const createCard = async (req, res) => {
   try {
     const { id } = req.params;
-    const { source } = req.body;
-    console.log(id);
-    // const card = await stripe.customers.createSource(id, {
-    //   source
-    // });
+    const { name, expire, number, type, cvc } = req.body;
+
+    const [month, year] = expire.split('/');
+
     const card = await stripe.customers.createSource(id, {
-      source: 'tok_visa',
+      // source: {
+      //   number,
+      //   cvc,
+      //   name,
+      //   exp_month: parseInt(month),
+      //   exp_year: parseInt(year),
+      //   object: 'card',
+      // },
+      source: type,
     });
     res.status(200).json(card);
   } catch (error) {
