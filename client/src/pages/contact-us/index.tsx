@@ -79,7 +79,9 @@ function Index() {
                   />
                 </div>
 
-                <p className="text-primary_font_color">info@avbids.com</p>
+                <p className="text-primary_font_color font-semibold">
+                  info@avbids.com
+                </p>
               </div>
               <div className="flex items-center gap-4">
                 <div className="flex items-center justify-center rounded-full w-12 h-12 bg-[#F3F1FB]">
@@ -89,7 +91,9 @@ function Index() {
                     className=" object-scale-down"
                   />
                 </div>
-                <p className="text-primary_font_color">(623) 420-6666</p>
+                <p className="text-primary_font_color font-semibold">
+                  (623) 420-6666
+                </p>
               </div>
             </div>
 
@@ -101,7 +105,9 @@ function Index() {
                   className=" object-scale-down"
                 />
               </div>
-              <p className="text-primary_font_color">Phoenix, Arizona</p>
+              <p className="text-primary_font_color font-semibold">
+                Phoenix, Arizona
+              </p>
             </div>
           </div>
           <img
@@ -133,7 +139,7 @@ function Index() {
                       Name
                     </Typography>
                     <Input
-                      placeholder="Enter first and last name"
+                      placeholder="Enter name"
                       className=" !border-t-blue-gray-200 focus:!border-t-gray-900 bg-white rounded-full"
                       labelProps={{
                         className: "before:content-none after:content-none",
