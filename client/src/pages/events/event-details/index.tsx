@@ -235,7 +235,7 @@ export function Index() {
                   </div>
                 </div>
               </div>
-              <div className="mb-6">
+              {/* <div className="mb-6">
                 <img
                   src={
                     event?.thumbnail[0]?.url
@@ -246,7 +246,7 @@ export function Index() {
                   loading="lazy"
                   className="object-contain md:w-[400px] rounded-lg"
                 />
-              </div>
+              </div> */}
               <div className="bg-[#F3F1FB] p-6 mb-16 rounded-lg">
                 <h2 className="text-[20px] mb-4">Description</h2>
                 <div
