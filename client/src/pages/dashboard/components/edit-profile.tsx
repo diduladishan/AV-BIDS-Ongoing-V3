@@ -232,7 +232,7 @@ const EditProfile: FC<EditProfileProps> = ({ user }) => {
                     className: "hidden",
                   }}
                   containerProps={{ className: "min-w-[100px]" }}
-                  placeholder="enter phone number"
+                  placeholder="Enter phone number"
                   crossOrigin=""
                   {...register("phone")}
                 />
