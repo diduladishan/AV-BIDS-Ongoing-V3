@@ -59,6 +59,7 @@ const Sidebar: FC<SidebarProps> = ({
     return checkboxData.map(({ value, label }) => (
       <div className="flex items-center" key={value}>
         <Checkbox
+          className="border border-[#717171]"
           crossOrigin=""
           checked={state.includes(value)}
           onChange={() => handleCheckboxChange(value, setState, state)}
@@ -79,9 +80,9 @@ const Sidebar: FC<SidebarProps> = ({
   };
 
   return (
-    <div className="">
-      <h2 className="text-primary text-[16px] mb-2">Filters: </h2>
-      <Card className="h-[calc(110vh-2rem)] w-full max-w-[18rem] px-4  bg-[#F3F1FB]">
+    <div className="bg-[#f3f1fb] ml-4 rounded-lg">
+      <h2 className="text-primary text-[16px] mb-2 pl-4 pt-6">Filters: </h2>
+      <Card className="h-[calc(110vh-2rem)] w-full max-w-[18rem] px-4  bg-[#f3f1fb] shadow-none">
         <div className="mb-2 p-4">
           <div className="mb-4">
             <h6>Event Type</h6>
@@ -132,7 +133,7 @@ const Sidebar: FC<SidebarProps> = ({
           </div>
 
           <div>
-            <h6>Audience Size </h6>
+            <h6>Audience Size</h6>
             {renderCheckboxes(
               audienceSizeCheckboxes,
               selectedAudienceSize,
@@ -140,7 +141,7 @@ const Sidebar: FC<SidebarProps> = ({
             )}
           </div>
 
-          <div>
+          {/* <div>
             <Button
               variant="filled"
               color="indigo"
@@ -150,7 +151,7 @@ const Sidebar: FC<SidebarProps> = ({
             >
               <span className="text-white normal-case">Apply Filters</span>
             </Button>
-          </div>
+          </div> */}
         </div>
       </Card>
     </div>
