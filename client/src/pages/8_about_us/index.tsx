@@ -7,7 +7,7 @@ function index() {
   return (
     <div className="container mx-auto">
       <section className="mb-8 mx-4">
-        <h2 className="text-primary text-center mb-8">About Us</h2>
+        <h2 className="text-primary text-center mb-8 mt-8">About Us</h2>
         <div className="grid sm:grid-cols-2 gap-4 content-center px-4 bg-[#F3F1FB] rounded-lg py-8">
           <div className="flex justify-center items-center">
             <div>
@@ -56,7 +56,7 @@ function index() {
             </div>
 
             <h2 className="text-[25px] sm:text-[30px] leading-[3rem] text-[#111111]">
-              Create a platform where meeting planners can easily find av
+              Create a platform where event managers can easily find av
               providers and vice versa; to change the old ways of new client
               capture.
             </h2>
@@ -117,7 +117,7 @@ function index() {
                 className="lg:inline-block bg-primary rounded-btn py-3 px-6 "
               >
                 <p className="text-white normal-case font-semibold text-[14px]">
-                  See Event Listings
+                  See Events
                 </p>
               </Button>
             </Link>

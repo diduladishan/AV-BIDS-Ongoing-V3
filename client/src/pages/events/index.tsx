@@ -116,7 +116,7 @@ function Index() {
   };
 
   return (
-    <div>
+    <div className="bg-[#f9f8ff] ">
       <Breadcrumbs />
       {loading ? (
         <div className="flex items-center justify-center h-full">
@@ -140,7 +140,7 @@ function Index() {
           </div>
 
           <div className="flex ">
-            <Card className="h-[calc(120vh-2rem)] w-full max-w-[20rem]  shadow-xl shadow-none mb-6 bg-[#fff]">
+            <Card className="h-[calc(120vh-2rem)] w-full max-w-[20rem]  shadow-none mb-6 bg-[#f9f8ff]">
               <div className=" ">
                 <Sidebar
                   selectedEventType={selectedEventType}
@@ -172,7 +172,7 @@ function Index() {
             /> */}
 
             <div className="container mx-auto w-max">
-              <h2 className="text-center text-primary mb-4">Event Listings </h2>
+              <h2 className="text-center text-primary mb-4">Event Listings</h2>
               <div className="flex items-center justify-between mb-6 mx-4">
                 <p className="text-[14px]">{events.length} events Found</p>
 

@@ -185,7 +185,9 @@ const EditProfile: FC<EditProfileProps> = ({ user }) => {
 
           <div>
             <div>
-              <p className="text-[16px] mb-2">Email Address</p>
+              <p className="text-[16px] mb-2">
+                Email Address <span className="text-[#DE5753]">*</span>{" "}
+              </p>
               <div className="bg-input_background rounded-full">
                 <Input
                   className="rounded-full !border !border-gray-300 text-gray-900 ring-transparent placeholder:text-gray-500 focus:!border-gray-900 focus:!border-t-gray-900 focus:ring-gray-900/10"
@@ -230,7 +232,7 @@ const EditProfile: FC<EditProfileProps> = ({ user }) => {
                     className: "hidden",
                   }}
                   containerProps={{ className: "min-w-[100px]" }}
-                  placeholder="enter phone number"
+                  placeholder="Enter phone number"
                   crossOrigin=""
                   {...register("phone")}
                 />
