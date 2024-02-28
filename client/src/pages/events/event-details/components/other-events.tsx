@@ -70,21 +70,25 @@ const OtherEvents: FC<OtherEventsProps> = ({ events, loading }) => {
                       </p>
                     </div>
 
-                    <div className="sm:flex items-center gap-16 mt-4">
-                      <div className="flex gap-2 items-center justify-center">
+                    <div className="flex items-center justify-between gap-16 mt-4 w-full">
+                      <div className="flex gap-2 items-center justify-center w-[250px]">
                         <img
                           src={EVENTDETAILS_04}
                           alt="Location Icon"
                           className="object-scale-down w-[20px]"
                         />
-                        <p className="text-[16px] text-[#9381FF]">
+                        <p className="text-[16px] ">
                           {event.address.city}, {event.address.state}
                         </p>
                       </div>
-                      <p className="text-[16px]">
-                        {event.eventCategory}, {event.eventSubCategory}
-                      </p>
-                      <div className="flex justify-center ">
+
+                      <div>
+                        <p className="text-[16px] sm:w-[270px]">
+                          {event.eventCategory}, {event.eventSubCategory}
+                        </p>
+                      </div>
+
+                      <div className="flex items-center justify-center">
                         <div className="rounded-full w-[90px] sm:w-[110px] py-2 px-3 bg-[#B5F9C4] font-poppins">
                           <p className="text-[#178751] font-semibold normal-case text-center text-[12px] sm:text-[16px]">
                             {event.eventType}
