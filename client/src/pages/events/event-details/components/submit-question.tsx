@@ -64,7 +64,7 @@ const SubmitQuestion: FC<SubmitQuestionProps> = ({ event }) => {
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="grid grid-cols-2 gap-y-8 gap-x-6">
           <div className="col-span-2 sm:col-span-1">
-            <p className="text-[16px] mb-2 font-medium">Email Address</p>
+            <p className="text-[16px] mb-2 font-medium">Email Address </p>
             <div className="w-full bg-input_background rounded-full">
               <Input
                 className="rounded-full !border !border-gray-300 text-gray-900 ring-transparent placeholder:text-gray-500 focus:!border-gray-900 focus:!border-t-gray-900 focus:ring-gray-900/10"
