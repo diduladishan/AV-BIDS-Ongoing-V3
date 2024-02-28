@@ -93,7 +93,7 @@ const SidebarDashboard = () => {
                     className={imageStyles}
                   />
                 </ListItemPrefix>
-                Saved Events
+                Followed Events
               </ListItem>
               <ListItem
                 onClick={() => navigate("/billing")}
