@@ -27,18 +27,17 @@ function Index() {
     });
   }, []);
   return (
-    <div className='container mx-auto'>
-        <div className='mb-4'>
-          <Breadcrumbs />
-        </div>
-      <div className='mx-2 sm:mx-2'>
-        <h2 className='text-[20px] font-semibold mb-4'>
-          Billing & Membership{' '}
+    <div className="container mx-auto">
+      <div className="mb-4">
+        <Breadcrumbs />
+      </div>
+      <div className="mx-2 sm:mx-2">
+        <h2 className="text-[20px] font-semibold mb-4">
+          Billing & Membership{" "}
         </h2>
 
-
-        {user?.subscription?.plan === 'PREMIUM' ||
-        user?.subscription?.plan === 'TRIAL' ? (
+        {user?.subscription?.plan === "PREMIUM" ||
+        user?.subscription?.plan === "TRIAL" ? (
           <>
             <CurrentPlan />
             <Elements
