@@ -105,7 +105,6 @@ const createSubscriptionWithTrial = async (req, res) => {
     // Find the user in the database by email
     const user = await getUserByEmail(email);
 
-
     // Create the subscription
     const subscription = await stripe.subscriptions.create({
       customer: user.subscription.customerId,
@@ -131,10 +130,9 @@ const createSubscriptionWithTrial = async (req, res) => {
       await user.save();
     }
 
-
     res.send({
       subscriptionId: subscription.id,
-      user
+      user,
       // clientSecret: subscription.latest_invoice.payment_intent.client_secret,
     });
   } catch (error) {
@@ -234,9 +232,9 @@ const createCard = async (req, res) => {
 const deleteCard = async (req, res) => {
   try {
     const { id } = req.params;
-    console.log(id);
+    const { customerId } = req.query;
 
-    const customerSource = await stripe.customers.deleteSource(id);
+    const customerSource = await stripe.customers.deleteSource(customerId, id);
     res.status(200).json(customerSource);
   } catch (error) {
     return res.status(400).send({ error: { message: error.message } });

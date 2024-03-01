@@ -5,7 +5,10 @@ import { MdDeleteOutline } from 'react-icons/md';
 import axios from 'axios';
 import { useGetCurrentUser } from '../../../app/hooks/useUser';
 import PLUS_ICON from '../../../assets/11_dashboard/plus.png';
+import DISCOVER from '../../../assets/17_billing/discover.png';
+import MASTER from '../../../assets/17_billing/mastercard.png';
 import VISA from '../../../assets/17_billing/visa.png';
+import api from '../../../utils/api';
 import BILLING_ADD_CARD from './billing-add-card';
 
 interface CardsOnFileProps {}
@@ -43,6 +46,16 @@ const CardsOnFile: FC<CardsOnFileProps> = () => {
     };
     fetchCards();
   }, [customerID, stripeSecretKey]);
+
+  const handleDeleteCard = async (id: string) => {
+    try {
+      await api.get(`/stripe/delete-card/${id}?customerId=${customerID}`);
+      const updatedCards = cards.filter((card: any) => card.id !== id);
+      setCards(updatedCards);
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   return (
     <section className='bg-[#fff] px-8 py-8 rounded-xl drop-shadow mb-6'>
@@ -88,11 +101,21 @@ const CardsOnFile: FC<CardsOnFileProps> = () => {
               <div className='justify-self-start'>
                 <div className='flex items-center gap-6'>
                   <img
-                    src={VISA}
+                    src={
+                      card.brand === 'Visa'
+                        ? VISA
+                        : card.brand === 'MasterCard'
+                        ? MASTER
+                        : card.brand === 'Discover'
+                        ? DISCOVER
+                        : ''
+                    }
                     alt='aad'
                     className='object-contain w-[49px]'
                   />
-                  <p className='font-semibold'>Visa (**** {card.last4})</p>
+                  <p className='font-semibold'>
+                    {card.brand} (**** {card.last4})
+                  </p>
                 </div>
               </div>
               <div>
@@ -105,10 +128,10 @@ const CardsOnFile: FC<CardsOnFileProps> = () => {
                   {card.funding === 'credit' ? 'Credit' : 'Debit'} Card
                 </p>
               </div>
-              <div>
+              {/* <div>
                 <p className='text-[15px] text-[#888888]'>DEFAULT</p>
-              </div>
-              <div>
+              </div> */}
+              <div onClick={() => handleDeleteCard(card.id)}>
                 <MdDeleteOutline size={24} className='text-[#DE5753]' />
               </div>
             </div>
