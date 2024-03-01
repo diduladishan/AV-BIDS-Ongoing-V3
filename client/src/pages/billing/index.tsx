@@ -9,6 +9,7 @@ import BillingDetails from "./components/billing-details";
 import BillingNewUser from "./components/billing-new-user";
 import CurrentPlan from "./components/current-plan";
 import Breadcrumbs from "../../components/Breadcrumbs";
+import CardsOnFile from "./components/cards-on-file";
 
 function Index() {
   const user = useGetCurrentUser();
@@ -45,7 +46,7 @@ function Index() {
             >
               <BillingDetails />
             </Elements>
-            {/* <CardsOnFile /> */}
+            <CardsOnFile />
           </>
         ) : (
           <BillingNewUser />
