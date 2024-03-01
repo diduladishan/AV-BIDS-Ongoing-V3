@@ -39,7 +39,8 @@ const register = async (req, res) => {
     const hashedPassword = await bcrypt.hash(password, salt);
 
     const customer = await stripe.customers.create({
-      email: req.body.email,
+      email,
+      name: `${firstName} ${lastName}`,
     });
 
     const user = await createUser({

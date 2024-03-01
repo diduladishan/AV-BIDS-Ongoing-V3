@@ -31,7 +31,6 @@ const CurrentPlan: FC<CurrentPlanProps> = () => {
     fetchPlan();
   }, [user?.subscription.subscriptionId]);
 
-  console.log(currentPlan);
 
   const handleCancelPlan = async () => {
     try {
