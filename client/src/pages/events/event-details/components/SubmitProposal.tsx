@@ -2,6 +2,7 @@ import { Button } from '@material-tailwind/react';
 import axios from 'axios';
 import { FC, useCallback, useState } from 'react';
 import { useDropzone } from 'react-dropzone';
+import { ImSpinner3 } from 'react-icons/im';
 import { setAlertWithTimeout } from '../../../../app/features/alerts/alertSlice';
 import { useAppDispatch } from '../../../../app/hooks';
 import UPLOAD_ICON from '../../../../assets/10_event_details_page/Upload icon.png';
@@ -21,6 +22,7 @@ export const SubmitProposal: FC<SubmitProposalProps> = ({
 }) => {
   const dispatch = useAppDispatch();
   const [uploadedFile, setUploadedFile] = useState<File | null>(null);
+  const [loading, setLoading] = useState(false);
 
   const onDrop = useCallback((acceptedFiles: File[]) => {
     // Take the first file for simplicity.
@@ -30,6 +32,7 @@ export const SubmitProposal: FC<SubmitProposalProps> = ({
   const { getRootProps, getInputProps } = useDropzone({ onDrop });
 
   const handleFileUpload = async () => {
+    setLoading(true);
     try {
       if (!uploadedFile) {
         console.error('No file uploaded');
@@ -84,6 +87,8 @@ export const SubmitProposal: FC<SubmitProposalProps> = ({
         // Something happened in setting up the request that triggered an Error
         console.log('Error while setting up the request:', error.message);
       }
+    } finally {
+      setLoading(false);
     }
   };
   return (
@@ -110,14 +115,20 @@ export const SubmitProposal: FC<SubmitProposalProps> = ({
             {uploadedFile && (
               <div className='flex flex-col'>
                 <p>File Name: {uploadedFile.name}</p>
-                <p>File Size: {uploadedFile.size} bytes</p>
-                <img
-                  src={URL.createObjectURL(uploadedFile)}
-                  alt='File Preview'
-                  className='flex items-center justify-center max-h-40 mt-2 object-contain'
-                />
+                <p>
+                  File Size: {(uploadedFile.size / (1024 * 1024)).toFixed(2)} MB
+                </p>
+                {uploadedFile.type === 'application/pdf' && (
+                  <embed
+                    src={URL.createObjectURL(uploadedFile)}
+                    type='application/pdf'
+                    width='100%'
+                    height='400px'
+                  />
+                )}
               </div>
             )}
+
             {!uploadedFile && (
               <p className='text-[15px]'>
                 To upload file size is (Max 5Mb) and allowed file types are
@@ -127,12 +138,13 @@ export const SubmitProposal: FC<SubmitProposalProps> = ({
           </div>
         </div>
       </div>
-      <div className='flex'>
+      <div className='flex items-center justify-center'>
         <Button
-          className='mx-6 mb-6 w-[485px] bg-primary'
+          className='mx-6 mb-6  bg-primary flex items-center'
           onClick={handleFileUpload}
         >
-          Upload Files
+          {loading && <ImSpinner3 className='animate-spin mr-2' />}
+          {loading ? 'Uploading' : 'Upload Files'}
         </Button>
       </div>
     </div>

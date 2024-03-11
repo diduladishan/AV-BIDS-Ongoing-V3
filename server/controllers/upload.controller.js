@@ -21,6 +21,10 @@ const fileUpload = async (req, res) => {
     fileExtension = 'png';
   } else if (req.query.type === 'pdf') {
     fileExtension = 'pdf';
+  } else if (req.query.type === 'docx') {
+    fileExtension = 'docx';
+  } else if (req.query.type === 'doc') {
+    fileExtension = 'doc';
   } else {
     // Handle other file types if needed
     return res.status(400).send('Unsupported file type');
@@ -29,10 +33,17 @@ const fileUpload = async (req, res) => {
   const key = `${req.user.id}/${uuidv4()}.${fileExtension}`;
 
   try {
+    const contentType =
+      fileExtension === 'pdf'
+        ? 'application/pdf'
+        : fileExtension === 'docx' || fileExtension === 'doc'
+        ? 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'
+        : `image/${fileExtension}` || '';
+
     const params = {
       Bucket: 'av-bids-bucket',
       Key: key,
-      ContentType: `image/${fileExtension}` || 'application/pdf' || '',
+      ContentType: contentType,
     };
 
     const command = new PutObjectCommand(params);
