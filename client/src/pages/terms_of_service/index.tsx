@@ -1,28 +1,28 @@
 export function Index() {
   return (
-    <div className="container mx-auto">
-      <div className="text-[#353535] text-[18px]">
-        <section className="">
+    <div className='container mx-auto'>
+      <div className='text-[#353535] text-[18px]'>
+        <section className=''>
           <div>
-            <p className="text-[#000] text-[35px] font-semibold text-center">
+            <p className='text-[#000] text-[35px] font-semibold text-center mt-12'>
               Terms of Service
             </p>
-            <p className="text-[#000] text-[18px] mb-6">
-              <span className="text-[#000] font-semibold">Effective date:</span>{" "}
+            <p className='text-[#000] text-[18px] mb-6'>
+              <span className='text-[#000] font-semibold'>Effective date:</span>{' '}
               6th December 2023
             </p>
-            <p className="text-[#353535] text-[18px] mb-4">
-              Welcome to AVBIDS!{" "}
+            <p className='text-[#353535] text-[18px] mb-4'>
+              Welcome to AVBIDS!{' '}
             </p>
-            <p className="text-[#353535] text-[18px] mb-4">
-              The AV Bids LLC{" "}
-              <span className="font-bold text-[#000]">
-                (“Company”, “Avbids”, “us”, “we”, or “our”){" "}
+            <p className='text-[#353535] text-[18px] mb-4'>
+              The AV Bids LLC{' '}
+              <span className='font-bold text-[#000]'>
+                (“Company”, “Avbids”, “us”, “we”, or “our”){' '}
               </span>
               owns and operates avbids.com (hereinafter referred to as
-              <span className="font-bold text-[#000]"> “Service”</span>).{" "}
+              <span className='font-bold text-[#000]'> “Service”</span>).{' '}
             </p>
-            <p className="mb-4">
+            <p className='mb-4'>
               The Company’s Privacy Policy governs your visit to
               http://www.avbids.com/ and explains how we collect, manage, use,
               safeguard and disclose Personal Information that results from your
@@ -33,7 +33,7 @@ export function Index() {
               2016/679 (the GDPR), California Privacy Protection Act (the
               CalOPPA) and California Consumer Privacy Act (the CCPA).
             </p>
-            <p className="mb-4">
+            <p className='mb-4'>
               We use your data to provide and improve Service. By using Service,
               you agree to the collection and use of information in accordance
               with this policy. Unless otherwise defined in this Privacy Policy,
@@ -42,45 +42,45 @@ export function Index() {
               govern all use of our Service and together with the Privacy Policy
               constitutes your agreement with us (“Agreement”).
             </p>
-            <p className="mb-6">
-              Our Terms and Conditions{" "}
-              <span className="font-bold text-[#000]">(“Terms”)</span> govern
+            <p className='mb-6'>
+              Our Terms and Conditions{' '}
+              <span className='font-bold text-[#000]'>(“Terms”)</span> govern
               all use of our Service and together with the Privacy Policy
-              constitutes your agreement with us{" "}
-              <span className="font-bold text-[#000]">(“Agreement”)</span>.
+              constitutes your agreement with us{' '}
+              <span className='font-bold text-[#000]'>(“Agreement”)</span>.
             </p>
 
-            <ol className="list-decimal">
+            <ol className='list-decimal'>
               {/* --------------------------------------------------------------------------------------------------------------------------------------------------------------- */}
-              <li className="text-[25px] text-[#000] font-bold mb-4">
+              <li className='text-[25px] text-[#000] font-bold mb-4'>
                 Definitions
               </li>
 
-              <ul className="list-disc mb-8">
+              <ul className='list-disc mb-8'>
                 <li>
-                  <span className="text-[#000] font-bold">Service </span>
+                  <span className='text-[#000] font-bold'>Service </span>
                   means the avbids.Com website operated by av bids llc.
                 </li>
                 <li>
-                  <span className="text-[#000] font-bold">Personal data </span>
+                  <span className='text-[#000] font-bold'>Personal data </span>
                   means data about a living individual who can be identified
                   from those data (or from those and other information either in
                   our possession or likely to come into our possession).
                 </li>
                 <li>
-                  <span className="text-[#000] font-bold">Usage data </span>
+                  <span className='text-[#000] font-bold'>Usage data </span>
                   is data collected automatically either generated by the use of
                   service or from service infrastructure itself (for example,
                   the duration of a page visit).
                 </li>
                 <li>
-                  <span className="text-[#000] font-bold">Cookies </span>
+                  <span className='text-[#000] font-bold'>Cookies </span>
                   are small files stored on your device (computer or mobile
                   device).
                 </li>
                 <li>
-                  <span className="text-[#000] font-bold">
-                    Data controller{" "}
+                  <span className='text-[#000] font-bold'>
+                    Data controller{' '}
                   </span>
                   means a natural or legal person who (either alone or jointly
                   or in common with other persons) determines the purposes for
@@ -89,8 +89,8 @@ export function Index() {
                   a data controller of your data.
                 </li>
                 <li>
-                  <span className="text-[#000] font-bold">
-                    Data processors (or service providers){" "}
+                  <span className='text-[#000] font-bold'>
+                    Data processors (or service providers){' '}
                   </span>
                   means any natural or legal person who processes the data on
                   behalf of the data controller. We may use the services of
@@ -98,36 +98,36 @@ export function Index() {
                   effectively.
                 </li>
                 <li>
-                  <span className="text-[#000] font-bold"> Data subject </span>
+                  <span className='text-[#000] font-bold'> Data subject </span>
                   is any living individual who is the subject of personal data.
                 </li>
                 <li>
-                  <span className="text-[#000] font-bold">The user </span>
+                  <span className='text-[#000] font-bold'>The user </span>
                   is the individual using our service. The user corresponds to
                   the data subject, who is the subject of personal data.
                 </li>
               </ul>
               {/* --------------------------------------------------------------------------------------------------------------------------------------------------------------- */}
 
-              <li className="text-[25px] text-[#000] font-bold mb-4">
+              <li className='text-[25px] text-[#000] font-bold mb-4'>
                 Types of Data Collected
               </li>
-              <p className="mb-4">
+              <p className='mb-4'>
                 We collect several different types of information for various
                 purposes to provide and improve our
               </p>
 
-              <p className="mb-4 text-[22px] font-bold text-[#000]">
+              <p className='mb-4 text-[22px] font-bold text-[#000]'>
                 Personal Data
               </p>
-              <p className="mb-4">
+              <p className='mb-4'>
                 While using our Service, we may ask you to provide us with
                 certain personally identifiable information that can be used to
                 contact or identify you (“Personal Data”). Personally,
                 identifiable information may include, but is not limited to:
               </p>
 
-              <ul className="mb-4 list-disc">
+              <ul className='mb-4 list-disc'>
                 <li>Email address</li>
                 <li>className and SurclassName</li>
                 <li>Business information</li>
@@ -135,33 +135,33 @@ export function Index() {
                 <li>Phone number Cookies and Usage Data</li>
               </ul>
 
-              <p className="mb-4">
+              <p className='mb-4'>
                 We may use your Personal Data to contact you with newsletters,
                 marketing or promotional materials and other information that
                 may be of interest to you.
               </p>
-              <p className="mb-4">
+              <p className='mb-4'>
                 You may opt out of receiving any, or all, of these
                 communications from us by contacting us info@avbids.com
               </p>
 
-              <p className="mb-4 text-[22px] font-bold text-[#000]">
+              <p className='mb-4 text-[22px] font-bold text-[#000]'>
                 Usage Data
               </p>
-              <p className="mb-4">
+              <p className='mb-4'>
                 We may also collect information that your browser sends whenever
                 you visit our Service or when you access Service by or through a
-                mobile device{" "}
-                <span className="font-bold text-[#000]">(“Usage Data”)</span>.
+                mobile device{' '}
+                <span className='font-bold text-[#000]'>(“Usage Data”)</span>.
               </p>
-              <p className="mb-4">
+              <p className='mb-4'>
                 This Usage Data may include information such as your computer's
                 Internet Protocol address (e.g., IP address), browser type,
                 browser version, the pages of our Service that you visit, the
                 time and date of your visit, the time spent on those pages,
                 unique device identifiers and other diagnostic data.
               </p>
-              <p className="mb-4">
+              <p className='mb-4'>
                 When you access Service with a mobile device, this Usage Data
                 may include information such as the type of mobile device you
                 use, your mobile device unique ID, the IP address of your mobile
@@ -170,10 +170,10 @@ export function Index() {
                 diagnostic data.
               </p>
 
-              <p className="mb-4 text-[22px] font-bold text-[#000]">
+              <p className='mb-4 text-[22px] font-bold text-[#000]'>
                 Device Information
               </p>
-              <p className="mb-4">
+              <p className='mb-4'>
                 We collect device-specific information when you access our
                 Services, including your hardware model, operating system and
                 version, unique device identifiers, mobile network information,
@@ -182,18 +182,18 @@ export function Index() {
               </p>
 
               {/* --------------------------------------------------------------------------------------------------------------------------------------------------------------- */}
-              <li className="text-[25px] text-[#000] font-bold mb-4">
+              <li className='text-[25px] text-[#000] font-bold mb-4'>
                 Use of Data
               </li>
-              <p className="mb-4">
+              <p className='mb-4'>
                 The Company uses the collected data for various purposes:
               </p>
 
-              <ul className="list-disc">
+              <ul className='list-disc'>
                 <li>To provide and maintain our Service;</li>
                 <li> To notify you about changes to our Service;</li>
                 <li>
-                  {" "}
+                  {' '}
                   To allow you to participate in interactive features of our
                   Service when you choose to do so;
                 </li>
@@ -207,19 +207,19 @@ export function Index() {
                 <li>To detect, prevent and address technical issues;</li>
                 <li> To fulfill any other purpose for which you provide it;</li>
                 <li>
-                  {" "}
+                  {' '}
                   To carry out our obligations and enforce our rights arising
                   from any contracts entered into between you and us, including
                   for billing and collection;
                 </li>
                 <li>
-                  {" "}
+                  {' '}
                   To provide you with notices about your account and/or
                   subscription, including expiration and renewal notices,
                   email-instructions, etc.;
                 </li>
                 <li>
-                  {" "}
+                  {' '}
                   To provide you with news, special offers, and general
                   information about other goods, services, and events which we
                   offer that are similar to those that you have already
@@ -235,17 +235,17 @@ export function Index() {
               </ul>
 
               {/* --------------------------------------------------------------------------------------------------------------------------------------------------------------- */}
-              <li className="text-[25px] text-[#000] font-bold mb-4">
+              <li className='text-[25px] text-[#000] font-bold mb-4'>
                 Retention of Data
               </li>
 
-              <div className="mb-4">
-                <p className="mb-4">
+              <div className='mb-4'>
+                <p className='mb-4'>
                   We will retain your Personal Data only for as long as is
                   necessary for the purposes set out in this Privacy Policy.
                 </p>
 
-                <p className="mb-4">
+                <p className='mb-4'>
                   We will retain and use your Personal Data to the extent
                   necessary to comply with our legal obligations (for example,
                   if we are required to retain your data to comply with
@@ -253,11 +253,11 @@ export function Index() {
                   agreements and policies.
                 </p>
 
-                <p className="mb-4">
+                <p className='mb-4'>
                   We will also retain Usage Data for internal analysis purposes.
                 </p>
 
-                <p className="mb-4">
+                <p className='mb-4'>
                   Usage Data is generally retained for a shorter period, except
                   when this data is used to strengthen the security or to
                   improve the functionality of our Service, or we are legally
@@ -265,30 +265,30 @@ export function Index() {
                 </p>
               </div>
               {/* --------------------------------------------------------------------------------------------------------------------------------------------------------------- */}
-              <li className="text-[25px] text-[#000] font-bold mb-4">
+              <li className='text-[25px] text-[#000] font-bold mb-4'>
                 Transfer of Data
               </li>
 
-              <div className="mb-4">
-                <p className="mb-4">
+              <div className='mb-4'>
+                <p className='mb-4'>
                   Your information, including Personal Data, may be transferred
                   to – and maintained on – computers located outside of your
                   state, province, country or other governmental jurisdiction
                   where the data protection laws may differ from those of your
                   jurisdiction.
                 </p>
-                <p className="mb-4">
+                <p className='mb-4'>
                   If you are located outside the United States Islands and
                   choose to provide information to us, please note that we
                   transfer the data, including Personal Data, to the United
                   States Islands and process it there.
                 </p>
-                <p className="mb-4">
+                <p className='mb-4'>
                   Your consent to this Privacy Policy followed by your
                   submission of such information represents your agreement to
                   that transfer.
                 </p>
-                <p className="mb-4">
+                <p className='mb-4'>
                   The Company will take all the steps reasonably necessary to
                   ensure that your data is treated securely and in accordance
                   with this Privacy Policy and no transfer of your Personal Data
@@ -298,38 +298,38 @@ export function Index() {
                 </p>
               </div>
               {/* --------------------------------------------------------------------------------------------------------------------------------------------------------------- */}
-              <li className="text-[25px] text-[#000] font-bold mb-4">
+              <li className='text-[25px] text-[#000] font-bold mb-4'>
                 Disclosure of Data
               </li>
 
-              <div className="mb-4">
-                <p className="mb-2">
+              <div className='mb-4'>
+                <p className='mb-2'>
                   We may disclose personal information that we collect, or you
                   provide:
                 </p>
-                <p className="mb-4 text-[22px] text-[#000] font-bold">
+                <p className='mb-4 text-[22px] text-[#000] font-bold'>
                   Disclosure for Law Enforcement
                 </p>
-                <p className="mb-4">
+                <p className='mb-4'>
                   Under certain circumstances, we may be required to disclose
                   your Personal Data if required to do so by law or in response
                   to valid requests by public authorities.
                 </p>
 
-                <p className="mb-4 text-[22px] text-[#000] font-bold">
+                <p className='mb-4 text-[22px] text-[#000] font-bold'>
                   Business Transaction
                 </p>
-                <p className="mb-4">
+                <p className='mb-4'>
                   If we or our subsidiaries are involved in a merger,
                   acquisition or asset sale, your Personal Data may be
                   transferred.
                 </p>
 
-                <p className="mb-4 text-[22px] text-[#000] font-bold">
+                <p className='mb-4 text-[22px] text-[#000] font-bold'>
                   Other cases. We may disclose your information also
                 </p>
 
-                <ul className="mb-4 list-disc">
+                <ul className='mb-4 list-disc'>
                   <li>to our subsidiaries and affiliates</li>
                   <li>
                     to contractors, service providers, and other third parties
@@ -353,32 +353,32 @@ export function Index() {
                 </ul>
               </div>
               {/* --------------------------------------------------------------------------------------------------------------------------------------------------------------- */}
-              <li className="text-[25px] text-[#000] font-bold mb-4">
+              <li className='text-[25px] text-[#000] font-bold mb-4'>
                 Security of Data
               </li>
 
-              <div className="mb-4">
-                <p className="mb-4">
+              <div className='mb-4'>
+                <p className='mb-4'>
                   The security of your data is important to us but remember that
                   no method of transmission over the Internet or method of
                   electronic storage is 100% secure.
                 </p>
-                <p className="mb-4">
+                <p className='mb-4'>
                   While we strive to use commercially acceptable means to
                   protect your Personal Data, we cannot guarantee its absolute
                   security.
                 </p>
               </div>
               {/* --------------------------------------------------------------------------------------------------------------------------------------------------------------- */}
-              <li className="text-[25px] text-[#000] font-bold mb-4">
+              <li className='text-[25px] text-[#000] font-bold mb-4'>
                 Your Rights
               </li>
-              <div className="mb-4">
-                <p className="mb-4">
+              <div className='mb-4'>
+                <p className='mb-4'>
                   You have the following rights in relation to your Data:
                 </p>
 
-                <ul className="mb-4 list-disc">
+                <ul className='mb-4 list-disc'>
                   <li>
                     Right to access - the right to request (i) copies of the
                     information we hold about you at any time, or (ii) that we
@@ -412,63 +412,63 @@ export function Index() {
                     interests.
                   </li>
                 </ul>
-                <p className="mb-4">
+                <p className='mb-4'>
                   To make enquiries, exercise any of your rights set out above,
                   or withdraw your consent to the processing of your Data (where
                   consent is our legal basis for processing your Data), please
-                  contact us via this e-mail address:{" "}
-                  <a href="mailto:info@avbids.com">info@avbids.com</a>
+                  contact us via this e-mail address:{' '}
+                  <a href='mailto:info@avbids.com'>info@avbids.com</a>
                 </p>
-                <p className="mb-4">
+                <p className='mb-4'>
                   If you are not satisfied with the way a complaint you make in
                   relation to your Data is handled by us, you may be able to
                   refer your complaint to the relevant data protection
                   authority.
                 </p>
-                <p className="mb-4">
+                <p className='mb-4'>
                   It is important that the Data we hold about you is accurate
                   and current. Please keep us informed if your Data changes
                   during the period for which we hold it.
                 </p>
               </div>
               {/* --------------------------------------------------------------------------------------------------------------------------------------------------------------- */}
-              <li className="text-[25px] text-[#000] font-bold">
+              <li className='text-[25px] text-[#000] font-bold'>
                 Your Data Protection Rights Under General Data Protection
                 Regulation (GDPR)
               </li>
-              <div className="mb-4">
-                <p className="mb-4">
+              <div className='mb-4'>
+                <p className='mb-4'>
                   If you are a resident of the European Union (EU) and European
                   Economic Area (EEA), you have certain data protection rights,
-                  covered by GDPR. – See more at{" "}
+                  covered by GDPR. – See more at{' '}
                   <a
-                    href="https://eurlex.europa.eu/eli/reg/2016/679/oj"
-                    className="text-[#5912FF] underline"
+                    href='https://eurlex.europa.eu/eli/reg/2016/679/oj'
+                    className='text-[#5912FF] underline'
                   >
                     https://eurlex.europa.eu/eli/reg/2016/679/oj
                   </a>
                 </p>
-                <p className="mb-4">
+                <p className='mb-4'>
                   We aim to take reasonable steps to allow you to correct,
                   amend, delete, or limit the use of your Personal Data.
                 </p>
-                <p className="mb-4">
+                <p className='mb-4'>
                   If you wish to be informed what Personal Data, we hold about
                   you and if you want it to be removed from our systems, please
-                  email us at{" "}
+                  email us at{' '}
                   <a
-                    href="mailto:info@avbids.com"
-                    className="text-[#5912FF] underline"
+                    href='mailto:info@avbids.com'
+                    className='text-[#5912FF] underline'
                   >
                     info@avbids.com
                   </a>
                 </p>
-                <p className="mb-4">
+                <p className='mb-4'>
                   In certain circumstances, you have the following data
                   protection rights:
                 </p>
 
-                <ul className="mb-4 list-disc">
+                <ul className='mb-4 list-disc'>
                   <li>
                     the right to access, update or to delete the information we
                     have on you
@@ -497,12 +497,12 @@ export function Index() {
                     consent to process your personal information;
                   </li>
                 </ul>
-                <p className="mb-4">
+                <p className='mb-4'>
                   Please note that we may ask you to verify your identity before
                   responding to such requests. Please note, we may not be able
                   to provide Service without some necessary data.
                 </p>
-                <p className="mb-4">
+                <p className='mb-4'>
                   You have the right to complain to a Data Protection Authority
                   about our collection and use of your Personal Data. For more
                   information, please contact your local data protection
@@ -510,12 +510,12 @@ export function Index() {
                 </p>
               </div>
               {/* --------------------------------------------------------------------------------------------------------------------------------------------------------------- */}
-              <li className="text-[25px] text-[#000] font-bold mb-4">
+              <li className='text-[25px] text-[#000] font-bold mb-4'>
                 Your Data Protection Rights under the California Privacy
                 Protection Act (CalOPPA)
               </li>
-              <div className="mb-4">
-                <p className="mb-4">
+              <div className='mb-4'>
+                <p className='mb-4'>
                   CalOPPA is the first state law in the nation to require
                   commercial websites and online services to post a privacy
                   policy. The law’s reach stretches well beyond California to
@@ -525,21 +525,21 @@ export function Index() {
                   to post a conspicuous privacy policy on its website stating
                   exactly the information being collected and those individuals
                   with whom it is being shared, and to comply with this policy.
-                  – See more at:{" "}
+                  – See more at:{' '}
                   <a
-                    href="mailto:info@avbids.com"
-                    className="text-[#5912FF] underline"
+                    href='mailto:info@avbids.com'
+                    className='text-[#5912FF] underline'
                   >
-                    {" "}
+                    {' '}
                     https://consumercal.org/about-cfc/cfc-education-foundation/california-online-privacy-protectionact-caloppa-3/
                   </a>
                 </p>
 
-                <p className="mb-4">
+                <p className='mb-4'>
                   According to CalOPPA we agree to the following:
                 </p>
 
-                <ul className="list-disc">
+                <ul className='list-disc'>
                   <li>Users can visit our site anonymously.</li>
                   <li>
                     Our Privacy Policy link includes the word “Privacy” and can
@@ -552,46 +552,46 @@ export function Index() {
                   </li>
                   <li>
                     Users are able to change their personal information by
-                    emailing us at{" "}
-                    <a href="mailto:info@avbids.com">info@avbids.com</a>.
+                    emailing us at{' '}
+                    <a href='mailto:info@avbids.com'>info@avbids.com</a>.
                   </li>
 
-                  <li className="mb-4">
+                  <li className='mb-4'>
                     Our Policy on “Do Not Track” Signals:
                   </li>
                 </ul>
 
-                <p className="mb-4">
+                <p className='mb-4'>
                   We honor Do Not Track signals and do not track, plant cookies,
                   or use advertising when a Do Not Track browser mechanism is in
                   place. Do Not Track is a preference you can set in your web
                   browser to inform websites that you do not want to be tracked.
                 </p>
-                <p className="mb-4">
+                <p className='mb-4'>
                   You can enable or disable Do Not Track by visiting the
                   Preferences or Settings page of your web browser.
                 </p>
               </div>
               {/* --------------------------------------------------------------------------------------------------------------------------------------------------------------- */}
-              <li className="text-[25px] text-[#000] font-bold mb-4">
+              <li className='text-[25px] text-[#000] font-bold mb-4'>
                 Your Data Protection Rights under the California Consumer
                 Privacy Act (CCPA)
               </li>
-              <div className="mb-4">
-                <p className="mb-4">
+              <div className='mb-4'>
+                <p className='mb-4'>
                   If you are a California resident, you are entitled to learn
                   what data we collect about you, ask to delete your data and
                   not to sell (share) it. To exercise your data protection
                   rights, you can make certain requests and ask us:
                 </p>
-                <p className="text-[22px] text-[#000] font-bold mb-4">
+                <p className='text-[22px] text-[#000] font-bold mb-4'>
                   What personal information we have about you
                 </p>
-                <p className="mb-4">
-                  {" "}
+                <p className='mb-4'>
+                  {' '}
                   If you make this request, we will return to you:
                 </p>
-                <ul className="list-disc mb-4">
+                <ul className='list-disc mb-4'>
                   <li>
                     The categories of personal information we have collected
                     about you
@@ -624,20 +624,20 @@ export function Index() {
                     any other company we shared it with.
                   </li>
                 </ul>
-                <p className="mb-4">
-                  {" "}
+                <p className='mb-4'>
+                  {' '}
                   Please note, you are entitled to ask us to provide you with
                   this information up to two times in a rolling twelve-month
                   period. When you make this request, the information provided
                   may be limited to the personal information we collected about
                   you in the previous 12 months.
                 </p>
-                <p className="text-[22px] text-[#000] mb-4 font-bold">
+                <p className='text-[22px] text-[#000] mb-4 font-bold'>
                   To delete your personal information
                 </p>
 
-                <p className="mb-4">
-                  {" "}
+                <p className='mb-4'>
+                  {' '}
                   If you make this request, we will delete the personal
                   information we hold about you as of the date of your request
                   from our records and direct any service providers to do the
@@ -647,7 +647,7 @@ export function Index() {
                   functions that require your personal information to operate.
                 </p>
 
-                <p className="text-[22px] text-[#000] mb-4 font-bold">
+                <p className='text-[22px] text-[#000] mb-4 font-bold'>
                   To stop selling your personal information
                 </p>
 
@@ -659,8 +659,8 @@ export function Index() {
                 </p>
               </div>
 
-              <div className="mb-4">
-                <p className="mb-4">
+              <div className='mb-4'>
+                <p className='mb-4'>
                   Please note, if you ask us to delete or stop selling your
                   data, it may impact your experience with us, and you may not
                   be able to participate in certain programs or membership
@@ -669,24 +669,24 @@ export function Index() {
                   against you for exercising your rights.
                 </p>
 
-                <p className="mb-4">
+                <p className='mb-4'>
                   To exercise your California data protection rights described
                   above, please send your request(s) by one of the following
                   means:
                 </p>
 
-                <p className="mb-2">
-                  {" "}
-                  By email:{" "}
+                <p className='mb-2'>
+                  {' '}
+                  By email:{' '}
                   <a
-                    href="mailto:info@avbids.com"
-                    className="text-[#5912FF] underline"
+                    href='mailto:info@avbids.com'
+                    className='text-[#5912FF] underline'
                   >
                     info@avbids.com
                   </a>
                 </p>
 
-                <p className="mb-4">
+                <p className='mb-4'>
                   Your data protection rights, described above, are covered by
                   the CCPA, short for the California Consumer Privacy Act. To
                   find out more, visit the official California Legislative
@@ -694,38 +694,38 @@ export function Index() {
                 </p>
               </div>
               {/* --------------------------------------------------------------------------------------------------------------------------------------------------------------- */}
-              <li className="text-[25px] text-[#000] font-bold mb-4">
+              <li className='text-[25px] text-[#000] font-bold mb-4'>
                 Service Providers
               </li>
 
-              <div className="mb-4">
-                <p className="mb-4">
+              <div className='mb-4'>
+                <p className='mb-4'>
                   We may employ third party companies and individuals to
-                  facilitate our Service{" "}
-                  <span className="text-[#000] font-bold">
+                  facilitate our Service{' '}
+                  <span className='text-[#000] font-bold'>
                     (“Service Providers”)
                   </span>
                   , provide Service on our behalf, perform Service-related
                   services or assist us in analyzing how our Service is used.
                 </p>
-                <p className="mb-4">
+                <p className='mb-4'>
                   These third parties have access to your Personal Data only to
                   perform these tasks on our behalf and are obligated not to
                   disclose or use it for any other purpose.
                 </p>
               </div>
               {/* --------------------------------------------------------------------------------------------------------------------------------------------------------------- */}
-              <li className="text-[25px] text-[#000] font-bold mb-4">
+              <li className='text-[25px] text-[#000] font-bold mb-4'>
                 Payments
               </li>
-              <div className="mb-4">
-                <p className="mb-4">
+              <div className='mb-4'>
+                <p className='mb-4'>
                   We may provide paid products and/or services within the
                   Service. In that case, we use third-party services for payment
                   processing (e.g., payment processors).
                 </p>
 
-                <p className="mb-4">
+                <p className='mb-4'>
                   services for payment processing (e.g. payment processors).
                   14.2. We will not store or collect your payment card details.
                   That information is provided directly to our third-party
@@ -738,100 +738,100 @@ export function Index() {
                   information.
                 </p>
 
-                <p className="mb-4">
+                <p className='mb-4'>
                   The payment processors we may work with are:
                 </p>
 
-                <p className="mb-4 text-[22px] font-bold text-[#000]">Stripe</p>
-                <p className="mb-4">
-                  Their Privacy Policy can be viewed at:{" "}
-                  <span className="text-[#5912FF] underline cursor-pointer">
-                    {" "}
+                <p className='mb-4 text-[22px] font-bold text-[#000]'>Stripe</p>
+                <p className='mb-4'>
+                  Their Privacy Policy can be viewed at:{' '}
+                  <span className='text-[#5912FF] underline cursor-pointer'>
+                    {' '}
                     https://stripe.com/us/privacy
                   </span>
                 </p>
               </div>
               {/* --------------------------------------------------------------------------------------------------------------------------------------------------------------- */}
-              <li className="text-[25px] text-[#000] font-bold mb-4">
+              <li className='text-[25px] text-[#000] font-bold mb-4'>
                 Links To Other Sites
               </li>
 
-              <div className="mb-4">
-                <p className="mb-4">
+              <div className='mb-4'>
+                <p className='mb-4'>
                   Our Service may contain links to other sites that are not
                   operated by us.
                 </p>
-                <p className="mb-4">
+                <p className='mb-4'>
                   If you click a third-party link, you will be directed to that
                   third party's site.
                 </p>
-                <p className="mb-4">
+                <p className='mb-4'>
                   We strongly advise you to review the Privacy Policy of every
                   site you visit.
                 </p>
-                <p className="mb-4">
+                <p className='mb-4'>
                   We have no control over and assume no responsibility for the
                   content, privacy policies or practices of any third-party
                   sites or services.
                 </p>
               </div>
               {/* --------------------------------------------------------------------------------------------------------------------------------------------------------------- */}
-              <li className="text-[25px] text-[#000] font-bold  mb-4">
+              <li className='text-[25px] text-[#000] font-bold  mb-4'>
                 Children’s Privacy
               </li>
 
-              <div className="mb-4">
-                <p className="mb-4">
+              <div className='mb-4'>
+                <p className='mb-4'>
                   Our Services are not intended for use by children under the
                   age of 13 (“Children”).
                 </p>
-                <p className="mb-4">
+                <p className='mb-4'>
                   We do not knowingly collect personally identifiable
                   information from Children under 13.
                 </p>
 
-                <p className="mb-4">
+                <p className='mb-4'>
                   If you become aware that a Child has provided us with Personal
                   Data, pleasecontact us.
                 </p>
 
-                <p className="mb-4">
+                <p className='mb-4'>
                   If we become aware that we have collected Personal Data from
                   Children without verification of parental consent, we take
                   steps to remove that information from our servers.
                 </p>
               </div>
               {/* --------------------------------------------------------------------------------------------------------------------------------------------------------------- */}
-              <li className="text-[25px] text-[#000] font-bold mb-4">
+              <li className='text-[25px] text-[#000] font-bold mb-4'>
                 Changes to this Privacy Policy
               </li>
 
-              <p className="mb-4">
+              <p className='mb-4'>
                 We may update our Privacy Policy from time to time. We will
                 notify you of any changes by posting the new Privacy Policy on
                 this page
               </p>
-              <p className="mb-4">
+              <p className='mb-4'>
                 We will let you know via email and/or a prominent notice on our
                 Service, prior to the change becoming effective and update
                 “effective date” at the top of this Privacy Policy.
               </p>
-              <p className="mb-4">
+              <p className='mb-4'>
                 You are advised to review this Privacy Policy periodically for
                 any changes. Changes to this Privacy Policy are effective when
                 they are posted on this page.
               </p>
               {/* --------------------------------------------------------------------------------------------------------------------------------------------------------------- */}
-              <li className="text-[25px] text-[#000] font-bold mb-4">
+              <li className='text-[25px] text-[#000] font-bold mb-4'>
                 Contact Us
               </li>
 
-              <div className="mb-4">
-                <p className="mb-4">
+              <div className='mb-4'>
+                <p className='mb-4'>
                   If you have any questions about this Privacy Policy, please
                   contact us:
                 </p>
-                <p className="mb-4">By email: info@avbids.com</p>
+                <p className='mb-4'>By email: info@avbids.com</p>
               </div>
               {/* --------------------------------------------------------------------------------------------------------------------------------------------------------------- */}
             </ol>

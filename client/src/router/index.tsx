@@ -2,6 +2,7 @@ import { Fragment, Key, lazy, Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import EmptyLayout from '../layout/empty-layout';
 import HomeLayout from '../layout/home-layout';
+import PrivacyTermsLayout from '../layout/privacy-terms-layout';
 
 import SuspenseScreen from './suspense-screen';
 
@@ -179,14 +180,14 @@ function Router() {
 
     {
       path: '/privacy_policy',
-      layout: HomeLayout2,
+      layout: PrivacyTermsLayout,
 
       routes: [{ element: lazy(() => import('../pages/privacy_policy')) }],
     },
 
     {
       path: '/terms_of_service',
-      layout: HomeLayout2,
+      layout: PrivacyTermsLayout,
 
       routes: [{ element: lazy(() => import('../pages/terms_of_service')) }],
     },
