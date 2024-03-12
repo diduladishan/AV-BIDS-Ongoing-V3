@@ -27,18 +27,18 @@ function Router() {
     },
 
     {
-      path: '/av_providers',
+      path: '/av-providers',
       layout: HomeLayout,
       routes: [{ element: lazy(() => import('../pages/av_providers')) }],
     },
     {
-      path: '/3_services',
+      path: '/services',
       layout: HomeLayout,
       routes: [{ element: lazy(() => import('../pages/3_services')) }],
     },
 
     {
-      path: '/4_event_categories',
+      path: '/event-categories',
       layout: HomeLayout,
       routes: [{ element: lazy(() => import('../pages/4_event_categories')) }],
     },
@@ -54,7 +54,7 @@ function Router() {
     },
 
     {
-      path: '/8_about_us',
+      path: '/about-us',
       layout: HomeLayout,
       routes: [{ element: lazy(() => import('../pages/8_about_us')) }],
     },
@@ -165,28 +165,28 @@ function Router() {
     },
 
     {
-      path: '/forgot_password',
+      path: '/forgot-password',
       layout: EmptyLayout,
 
       routes: [{ element: lazy(() => import('../pages/forgot_password')) }],
     },
 
     {
-      path: '/message_new_design',
+      path: '/message-new-design',
       layout: HomeLayout2,
 
       routes: [{ element: lazy(() => import('../pages/message_new_design')) }],
     },
 
     {
-      path: '/privacy_policy',
+      path: '/privacy-policy',
       layout: PrivacyTermsLayout,
 
       routes: [{ element: lazy(() => import('../pages/privacy_policy')) }],
     },
 
     {
-      path: '/terms_of_service',
+      path: '/terms-of-service',
       layout: PrivacyTermsLayout,
 
       routes: [{ element: lazy(() => import('../pages/terms_of_service')) }],
