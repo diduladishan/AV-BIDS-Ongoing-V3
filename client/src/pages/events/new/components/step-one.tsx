@@ -624,9 +624,9 @@ const StepOne: FC<StepOneProps> = ({ control, register, updateFormData }) => {
 
           {/* thumbnail upload */}
 
-          <div className='bg-[#fff] py-3 w-[200px]'>
+          {/* <div className='bg-[#fff] py-3 w-[200px]'>
             <p className='text-center text-[#977df2] text-[16px]'>
-              Upload your thumbnail
+              Upload your thumbnail 
             </p>
             <p className='text-center text-[10px] mb-4'>
               Files should be pdf, rtf or txt
@@ -695,7 +695,7 @@ const StepOne: FC<StepOneProps> = ({ control, register, updateFormData }) => {
                 </Button>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </form>
     </div>
