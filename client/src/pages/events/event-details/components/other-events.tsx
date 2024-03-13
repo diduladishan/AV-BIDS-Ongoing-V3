@@ -1,10 +1,9 @@
-import { Button, Spinner } from "@material-tailwind/react";
-import { FC } from "react";
-import { useNavigate, useParams } from "react-router-dom";
-import EVENTDETAILS_03 from "../../../../assets/13_event_details_page/Rectangle 3759.png";
-import EVENTDETAILS_04 from "../../../../assets/13_event_details_page/location.png";
-import { Event } from "../../../../types";
-import LazyLoad from "react-lazy-load";
+import { Spinner } from '@material-tailwind/react';
+import { FC } from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
+import EVENTDETAILS_04 from '../../../../assets/13_event_details_page/location.png';
+import { Event } from '../../../../types';
+import LazyLoad from 'react-lazy-load';
 
 interface OtherEventsProps {
   events: Event[];
@@ -19,20 +18,20 @@ const OtherEvents: FC<OtherEventsProps> = ({ events, loading }) => {
   const limitedEvents = filteredEvents.slice(0, 3);
 
   return (
-    <div className="text-center sm:text-left">
+    <div className='text-center sm:text-left'>
       {loading ? (
-        <div className="flex items-center justify-center h-full">
+        <div className='flex items-center justify-center h-full'>
           <Spinner />
         </div>
       ) : (
         <>
-          <h2 className="text-[20px] mb-4">Other events by this client</h2>
+          <h2 className='text-[20px] mb-4'>Other events by this client</h2>
 
           {limitedEvents.length > 0 ? (
             limitedEvents?.map((event) => (
-              <div key={event._id} className="mb-6 ">
+              <div key={event._id} className='mb-6 '>
                 <div
-                  className="sm:flex items-center bg-[#f3f1fb] gap-8 p-3 rounded-lg hover:cursor-pointer"
+                  className='sm:flex items-center bg-[#f3f1fb] gap-8 p-3 rounded-lg hover:cursor-pointer'
                   onClick={() => {
                     navigate(`/events/${event._id}`);
                     window.location.reload();
@@ -53,44 +52,44 @@ const OtherEvents: FC<OtherEventsProps> = ({ events, loading }) => {
                   </div> */}
 
                   <div>
-                    <h2 className="text-[20px]">{event.title}</h2>
+                    <h2 className='text-[20px]'>{event.title}</h2>
 
-                    <div className="sm:flex gap-36">
-                      <div className="sm:flex gap-2">
-                        <p className="text-[16px] sm:text-[18px]">
+                    <div className='sm:flex gap-36'>
+                      <div className='sm:flex gap-2'>
+                        <p className='text-[16px] sm:text-[18px]'>
                           Event Date:
                         </p>
-                        <p className="text-[14px] sm:text-[18px]">
+                        <p className='text-[14px] sm:text-[18px]'>
                           {event.eventStartDate} - {event.eventEndDate}
                         </p>
                       </div>
 
-                      <p className="text-[16px] sm:text-[18px]">
+                      <p className='text-[16px] sm:text-[18px]'>
                         {event.eventBudget}
                       </p>
                     </div>
 
-                    <div className="flex items-center justify-between gap-16 mt-4 w-full">
-                      <div className="flex gap-2 items-center justify-center w-[250px]">
+                    <div className='flex items-center justify-between gap-16 mt-4 w-full'>
+                      <div className='flex gap-2 items-center justify-center w-[250px]'>
                         <img
                           src={EVENTDETAILS_04}
-                          alt="Location Icon"
-                          className="object-scale-down w-[20px]"
+                          alt='Location Icon'
+                          className='object-scale-down w-[20px]'
                         />
-                        <p className="text-[16px] ">
+                        <p className='text-[16px] '>
                           {event.address.city}, {event.address.state}
                         </p>
                       </div>
 
                       <div>
-                        <p className="text-[16px] sm:w-[270px]">
+                        <p className='text-[16px] sm:w-[270px]'>
                           {event.eventCategory}, {event.eventSubCategory}
                         </p>
                       </div>
 
-                      <div className="flex items-center justify-center">
-                        <div className="rounded-full w-[90px] sm:w-[110px] py-2 px-3 bg-[#B5F9C4] font-poppins">
-                          <p className="text-[#178751] font-semibold normal-case text-center text-[12px] sm:text-[16px]">
+                      <div className='flex items-center justify-center'>
+                        <div className='rounded-full w-[90px] sm:w-[110px] py-2 px-3 bg-[#B5F9C4] font-poppins'>
+                          <p className='text-[#178751] font-semibold normal-case text-center text-[12px] sm:text-[16px]'>
                             {event.eventType}
                           </p>
                         </div>
@@ -101,7 +100,7 @@ const OtherEvents: FC<OtherEventsProps> = ({ events, loading }) => {
               </div>
             ))
           ) : (
-            <p className="mb-10 text-gray-500">
+            <p className='mb-10 text-gray-500'>
               There are no other events by this client
             </p>
           )}
