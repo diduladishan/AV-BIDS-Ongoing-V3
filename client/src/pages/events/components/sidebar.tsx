@@ -4,14 +4,14 @@ import {
   Checkbox,
   Option,
   Select,
-} from "@material-tailwind/react";
-import { FC } from "react";
+} from '@material-tailwind/react';
+import { FC } from 'react';
 import {
   CheckboxItem,
   audienceSizeCheckboxes,
   checkboxes,
   priceRangeCheckboxes,
-} from "../../../constants";
+} from '../../../constants';
 
 interface SidebarProps {
   selectedEventType: string[];
@@ -57,10 +57,10 @@ const Sidebar: FC<SidebarProps> = ({
     setState: React.Dispatch<React.SetStateAction<string[]>>
   ) => {
     return checkboxData.map(({ value, label }) => (
-      <div className="flex items-center" key={value}>
+      <div className='flex items-center' key={value}>
         <Checkbox
-          className="border border-[#717171]"
-          crossOrigin=""
+          className='border border-[#717171]'
+          crossOrigin=''
           checked={state.includes(value)}
           onChange={() => handleCheckboxChange(value, setState, state)}
         />
@@ -80,11 +80,11 @@ const Sidebar: FC<SidebarProps> = ({
   };
 
   return (
-    <div className="bg-[#f3f1fb] ml-4 rounded-lg">
-      <h2 className="text-primary text-[16px] mb-2 pl-4 pt-6">Filters: </h2>
-      <Card className="h-[calc(110vh-2rem)] w-full max-w-[18rem] px-4  bg-[#f3f1fb] shadow-none">
-        <div className="mb-2 p-4">
-          <div className="mb-4">
+    <div className='bg-[#f3f1fb] ml-4 rounded-lg'>
+      <h2 className='text-primary text-[16px] mb-2 pl-4 pt-6'>Filters: </h2>
+      <Card className='h-[calc(110vh-2rem)] w-full max-w-[18rem] px-4  bg-[#f3f1fb] shadow-none'>
+        <div className='mb-2 p-4'>
+          <div className='mb-4'>
             <h6>Event Type</h6>
             {renderCheckboxes(
               checkboxes,
@@ -93,37 +93,56 @@ const Sidebar: FC<SidebarProps> = ({
             )}
           </div>
 
-          <div className="mb-4">
+          <div className='mb-4'>
             <h6>Event Categories</h6>
             {renderCheckboxes(
               [
-                { value: "Corporate", label: "Corporate" },
-                { value: "Non-Corporate", label: "Non-Corporate" },
+                { value: 'Corporate', label: 'Corporate' },
+                { value: 'Non-Corporate', label: 'Non-Corporate' },
               ],
               selectedEventCategory,
               setSelectedEventCategory
             )}
           </div>
 
-          <div className="mb-4">
-            <h6 className="mb-4">Corporate Categories</h6>
-            <div className="w-full ">
+          <div className='mb-4'>
+            <h6 className='mb-4'>Corporate Categories</h6>
+            <div className='w-full '>
               <Select
-                label="Select Sub Category"
-                className="bg-white"
+                label='Select Sub Category'
+                className='bg-white'
                 value={selectedEventSubCategory}
                 onChange={(value: any) => setSelectedEventSubCategory(value)}
               >
-                <Option value="">All</Option>
-                <Option value="Awards">Awards</Option>
-                <Option value="Banquet">Banquet</Option>
-                <Option value="Board Meeting">Board Meeting</Option>
-                <Option value="Breakout Session">Breakout Session</Option>
+                <Option value=''>All</Option>
+                <Option value='Awards'>Awards</Option>
+                <Option value='Banquet'>Banquet</Option>
+                <Option value='Board Meeting'>Board Meeting</Option>
+                <Option value='Breakout Session'>Breakout Session</Option>
+                <Option value='Conference'>Conference</Option>
+                <Option value='Congress'>Congress</Option>
+                <Option value='Consumer Trade'>Consumer Trade</Option>
+                <Option value='Holiday Party'>Holiday Party</Option>
+                <Option value='Industry and Consumer Trade Show'>
+                  Industry and Consumer Trade Show
+                </Option>
+                <Option value='Industry Trade Show'>Industry Trade Show</Option>
+                <Option value='International Meeting'>
+                  International Meeting
+                </Option>
+                <Option value='Networking'>Networking</Option>
+                <Option value='Plenary General'>Plenary General</Option>
+                <Option value='Product Launch'>Product Launch</Option>
+                <Option value='Reception'>Reception</Option>
+                <Option value='Retreat'>Retreat</Option>
+                <Option value='Seminar'>Seminar</Option>
+                <Option value='Workshop'>Workshop</Option>
+                <Option value='Press'>Press</Option>
               </Select>
             </div>
           </div>
 
-          <div className="mb-4">
+          <div className='mb-4'>
             <h6>Price Range</h6>
             {renderCheckboxes(
               priceRangeCheckboxes,

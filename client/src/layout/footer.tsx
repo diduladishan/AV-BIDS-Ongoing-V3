@@ -1,12 +1,12 @@
-import { Link } from "react-router-dom";
-import LOGO from "../assets/logo_dark.png";
+import { Link } from 'react-router-dom';
+import LOGO from '../assets/logo_dark.png';
 
 const currentYear = new Date().getFullYear();
 
 export function Footer() {
   return (
-    <footer className="relative w-full px-8 py-16 bg-[#151045] text-white">
-      <div className="mx-auto w-full max-w-7xl px-8">
+    <footer className='relative w-full px-8 py-16 bg-[#151045] text-white'>
+      <div className='mx-auto w-full max-w-7xl px-8'>
         <div></div>
 
         {/* <div className="mx-auto grid w-full grid-cols-1 gap-8 py-12 sm:grid-cols-3 lg:grid-cols-5">
@@ -36,84 +36,84 @@ export function Footer() {
           ))}
         </div> */}
 
-        <div className="grid sm:grid-cols-3 md:grid-cols-5 gap-8 mb-4">
-          <div className="mb-8 sm:col-span-3 md:col-span-2 sm:place-self-start ">
-            <img src={LOGO} alt="" className="w-[140px]" />
+        <div className='grid sm:grid-cols-3 md:grid-cols-5 gap-8 mb-4'>
+          <div className='mb-8 sm:col-span-3 md:col-span-2 sm:place-self-start '>
+            <img src={LOGO} alt='' className='w-[140px]' />
 
-            <p className="text-sm mt-4 sm:mb-8 md:mb-0">
+            <p className='text-sm mt-4 sm:mb-8 md:mb-0'>
               All Rights Reserved - {currentYear}
             </p>
 
-            <Link to="/terms_of_service">
-              <p className="text-sm mt-4 sm:mb-8 md:mb-0">Terms of Service</p>
+            <Link to='/terms-of-service'>
+              <p className='text-sm mt-4 sm:mb-8 md:mb-0'>Terms of Service</p>
             </Link>
 
-            <Link to="/privacy_policy">
-              <p className="text-sm mt-4 sm:mb-8 md:mb-0">Privacy Policy</p>
+            <Link to='/privacy-policy'>
+              <p className='text-sm mt-4 sm:mb-8 md:mb-0'>Privacy Policy</p>
             </Link>
           </div>
 
-          <div className="mb-6 text-center">
-            <h4 className="mb-8 uppercase text-center">For Event Planners</h4>
+          <div className='mb-6 text-center'>
+            <h4 className='mb-8 uppercase text-center'>For Event Planners</h4>
 
-            <Link to="/event-planner">
-              <p className="hover:underline transition ease-in-out duration-300 cursor-pointer mb-4 ">
+            <Link to='/event-planner'>
+              <p className='hover:underline transition ease-in-out duration-300 cursor-pointer mb-4 '>
                 How to get started
               </p>
             </Link>
 
-            <Link to="/event-planner">
-              <p className="hover:underline transition ease-in-out duration-300 cursor-pointer mb-4">
+            <Link to='/event-planner'>
+              <p className='hover:underline transition ease-in-out duration-300 cursor-pointer mb-4'>
                 FAQs
               </p>
             </Link>
 
-            <Link to="/4_event_categories">
-              <p className="hover:underline transition ease-in-out duration-300 cursor-pointer">
+            <Link to='/4_event_categories'>
+              <p className='hover:underline transition ease-in-out duration-300 cursor-pointer'>
                 Event Categories
               </p>
             </Link>
           </div>
 
-          <div className="mb-6 text-center">
-            <h4 className="mb-8 uppercase text-center ">For AV Providers</h4>
+          <div className='mb-6 text-center'>
+            <h4 className='mb-8 uppercase text-center '>For AV Providers</h4>
 
-            <Link to="/av_providers">
-              <p className="hover:underline transition ease-in-out duration-300 cursor-pointer mb-4">
+            <Link to='/av_providers'>
+              <p className='hover:underline transition ease-in-out duration-300 cursor-pointer mb-4'>
                 How to get started
               </p>
             </Link>
 
-            <Link to="/av_providers">
-              <p className="hover:underline transition ease-in-out duration-300 cursor-pointer mb-4">
+            <Link to='/av_providers'>
+              <p className='hover:underline transition ease-in-out duration-300 cursor-pointer mb-4'>
                 FAQs
               </p>
             </Link>
 
-            <Link to="/4_event_categories">
-              <p className="hover:underline transition ease-in-out duration-300 cursor-pointer">
+            <Link to='/4_event_categories'>
+              <p className='hover:underline transition ease-in-out duration-300 cursor-pointer'>
                 Event Categories
               </p>
             </Link>
           </div>
 
-          <div className="text-center">
-            <h4 className="mb-8 uppercase text-center ">AV Bids</h4>
+          <div className='text-center'>
+            <h4 className='mb-8 uppercase text-center '>AV Bids</h4>
 
-            <Link to="/8_about_us">
-              <p className="hover:underline transition ease-in-out duration-300 cursor-pointer mb-4">
+            <Link to='/8_about_us'>
+              <p className='hover:underline transition ease-in-out duration-300 cursor-pointer mb-4'>
                 About us
               </p>
             </Link>
 
-            <Link to="/contact-us">
-              <p className="hover:underline transition ease-in-out duration-300 cursor-pointer mb-4">
+            <Link to='/contact-us'>
+              <p className='hover:underline transition ease-in-out duration-300 cursor-pointer mb-4'>
                 Contact us
               </p>
             </Link>
 
-            <Link to="/3_services">
-              <p className="hover:underline transition ease-in-out duration-300 cursor-pointer">
+            <Link to='/3_services'>
+              <p className='hover:underline transition ease-in-out duration-300 cursor-pointer'>
                 Services
               </p>
             </Link>

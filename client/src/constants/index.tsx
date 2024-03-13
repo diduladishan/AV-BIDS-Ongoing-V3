@@ -75,6 +75,29 @@ export const eventSubCategories = [
   { label: 'Banquet', value: 'Banquet' },
   { label: 'Board Meeting', value: 'Board Meeting' },
   { label: 'Breakout Session', value: 'Breakout Session' },
+  { label: 'Conference', value: 'Conference' },
+  { label: 'Congress', value: 'Congress' },
+
+  { label: 'Consumer Trade', value: 'Consumer Trade' },
+  { label: 'Holiday Party', value: 'Holiday Party' },
+  {
+    label: 'Industry and Consumer Trade Show',
+    value: 'Industry and Consumer Trade Show',
+  },
+
+  {
+    label: 'Industry Trade Show',
+    value: 'Industry Trade Show',
+  },
+  { label: 'International Meeting', value: 'International Meeting' },
+  { label: 'Networking', value: 'Networking' },
+  { label: 'Plenary General', value: 'Plenary General' },
+  { label: 'Product Launch', value: 'Product Launch' },
+  { label: 'Reception', value: 'Reception' },
+  { label: 'Retreat', value: 'Retreat' },
+  { label: 'Seminar', value: 'Seminar' },
+  { label: 'Workshop', value: 'Workshop' },
+  { label: 'Press', value: 'Press' },
 ] as const;
 
 export interface CheckboxItem {
