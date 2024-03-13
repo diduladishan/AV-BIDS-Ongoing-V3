@@ -2,6 +2,7 @@ import { Fragment, Key, lazy, Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import EmptyLayout from '../layout/empty-layout';
 import HomeLayout from '../layout/home-layout';
+import EventsLayout from '../layout/events-layout';
 import PrivacyTermsLayout from '../layout/privacy-terms-layout';
 
 import SuspenseScreen from './suspense-screen';
@@ -82,7 +83,7 @@ function Router() {
 
     {
       path: '/events',
-      layout: HomeLayout,
+      layout: EventsLayout,
       // guard: SubscriptionAndAuthWrapper,
       routes: [{ element: lazy(() => import('../pages/events')) }],
     },

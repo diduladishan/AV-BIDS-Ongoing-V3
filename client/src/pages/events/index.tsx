@@ -147,7 +147,7 @@ function Index() {
             />
           </div>
 
-          <div className='flex justify-center gap-6 '>
+          <div className='flex justify-center gap-6'>
             {/* <MobileSidebar /> */}
             <div className='absolute md:relative top-10 left-3 z-10'>
               <img
@@ -194,7 +194,10 @@ function Index() {
             /> */}
 
             <div className='w-max'>
-              <h2 className='text-center text-primary mb-4'>Event Listings</h2>
+              <h2 className='text-center text-primary mb-4 2xl:mb-16 mt-6 xl:text-[40px] lg:text-[35px] md:text-[35px] text-[30px]'>
+                Event Listings
+              </h2>
+
               <div className='flex items-center justify-between mb-6 mx-4 z-20'>
                 <p className='text-[14px]'>{events.length} events Found</p>
 
