@@ -4,9 +4,9 @@ import { FC, useState } from 'react';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import { useGetCurrentUser } from '../../../app/hooks/useUser';
-import DISCOVER from '../../../assets/17_billing/Discover.png';
-import MASTER from '../../../assets/17_billing/Mastercard.png';
-import VISA from '../../../assets/17_billing/Visa.png';
+import DISCOVER from '../../../assets/17_billing/discover.png';
+import MASTER from '../../../assets/17_billing/mastercard.png';
+import VISA from '../../../assets/17_billing/visa.png';
 import api from '../../../utils/api';
 import {
   CardFormSchema,

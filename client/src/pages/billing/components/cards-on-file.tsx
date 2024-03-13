@@ -5,9 +5,9 @@ import { MdDeleteOutline } from 'react-icons/md';
 import axios from 'axios';
 import { useGetCurrentUser } from '../../../app/hooks/useUser';
 import PLUS_ICON from '../../../assets/11_dashboard/plus.png';
-import DISCOVER from '../../../assets/17_billing/Discover.png';
-import MASTER from '../../../assets/17_billing/Mastercard.png';
-import VISA from '../../../assets/17_billing/Visa.png';
+import DISCOVER from '../../../assets/17_billing/discover.png';
+import MASTER from '../../../assets/17_billing/mastercard.png';
+import VISA from '../../../assets/17_billing/visa.png';
 import api from '../../../utils/api';
 import BILLING_ADD_CARD from './billing-add-card';
 
