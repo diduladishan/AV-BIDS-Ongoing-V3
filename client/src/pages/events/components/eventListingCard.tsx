@@ -1,18 +1,18 @@
-import { Button } from "@material-tailwind/react";
+import { Button } from '@material-tailwind/react';
 
-import { differenceInDays, parseISO } from "date-fns";
-import { FC } from "react";
-import LazyLoad from "react-lazy-load";
-import { useNavigate } from "react-router-dom";
-import { setAlertWithTimeout } from "../../../app/features/alerts/alertSlice";
-import { updateUser } from "../../../app/features/user/userSlice";
-import { useAppDispatch } from "../../../app/hooks";
-import { useGetCurrentUser } from "../../../app/hooks/useUser";
-import EVENTS_01 from "../../../assets/09_events/events01.png";
-import EVENTS_02 from "../../../assets/09_events/location.png";
-import SAVE_ICON from "../../../assets/09_events/save-icon.png";
-import { Event } from "../../../types";
-import api from "../../../utils/api";
+import { differenceInDays, parseISO } from 'date-fns';
+import { FC } from 'react';
+import LazyLoad from 'react-lazy-load';
+import { useNavigate } from 'react-router-dom';
+import { setAlertWithTimeout } from '../../../app/features/alerts/alertSlice';
+import { updateUser } from '../../../app/features/user/userSlice';
+import { useAppDispatch } from '../../../app/hooks';
+import { useGetCurrentUser } from '../../../app/hooks/useUser';
+import EVENTS_01 from '../../../assets/09_events/events01.png';
+import EVENTS_02 from '../../../assets/09_events/location.png';
+import SAVE_ICON from '../../../assets/09_events/save-icon.png';
+import { Event } from '../../../types';
+import api from '../../../utils/api';
 
 interface EventListingCardProps {
   event: Event;
@@ -35,7 +35,7 @@ const EventListingCard: FC<EventListingCardProps> = ({ event }) => {
       dispatch(
         setAlertWithTimeout({
           message: data.message,
-          color: "green",
+          color: 'green',
           open: true,
         })
       );
@@ -45,15 +45,15 @@ const EventListingCard: FC<EventListingCardProps> = ({ event }) => {
         dispatch(
           setAlertWithTimeout({
             message: error.response.data.error,
-            color: "red",
+            color: 'red',
             open: true,
           })
         );
       } else if (error.request) {
-        console.log("No response received from the server.");
+        console.log('No response received from the server.');
       } else {
         // Something happened in setting up the request that triggered an Error
-        console.log("Error while setting up the request:", error.message);
+        console.log('Error while setting up the request:', error.message);
       }
     }
   };
@@ -63,10 +63,10 @@ const EventListingCard: FC<EventListingCardProps> = ({ event }) => {
 
   const daysLeft = differenceInDays(proposalDueDate, currentDate);
   return (
-    <div className="mb-6">
-      <div className="flex items-center justify-center bg-[#fff] drop-shadow-lg gap-6 p-4 rounded-lg mx-4">
-        <div>
-          <div className="flex items-center gap-4">
+    <div className='mb-6'>
+      <div className='sm:flex items-center justify-center bg-[#fff] drop-shadow-lg gap-4 p-4 rounded-lg mx-4 w-max'>
+        <div className=''>
+          <div className='flex items-center gap-4'>
             {/* <div>
               <LazyLoad height={73} threshold={0.99}>
                 <img
@@ -80,73 +80,77 @@ const EventListingCard: FC<EventListingCardProps> = ({ event }) => {
 
             <div>
               <div
-                className="flex items-center  cursor-pointer"
+                className='flex items-center  cursor-pointer'
                 onClick={() => navigate(`/events/${event._id}`)}
               >
-                <h2 className="text-[18px]  mb-1">{event.title}</h2>
+                <h2 className='text-[18px]  mb-1'>{event.title}</h2>
               </div>
 
-              <div className="flex gap-1 items-center mb-1">
+              <div className='flex gap-1 items-center mb-1'>
                 <img
                   src={EVENTS_02}
-                  alt="aad"
-                  className="object-scale-down w-[20px]"
+                  alt='aad'
+                  className='object-scale-down w-[20px]'
                 />
-                <p className="text-[16px] text-[#9381FF]">
-                  {event?.address?.city ?? ""}, {event?.address?.state ?? ""}
+                <p className='text-[16px] text-[#9381FF]'>
+                  {event?.address?.city ?? ''}, {event?.address?.state ?? ''}
                 </p>
               </div>
 
-              <p className="text-[16px] mb-1">
+              <p className='text-[16px] mb-1'>
                 {event.eventCategory}, {event.eventSubCategory}
               </p>
             </div>
           </div>
 
-          <div className="flex items-center gap-16 mt-0">
-            <div className="flex gap-36">
-              <p className="text-[16px] mb-1">
+          <div className='lg:flex items-end gap-20 mt-0'>
+            <div className=''>
+              <p className='text-[15px] mb-1 '>
                 Event Date: {event.eventStartDate} - {event.eventEndDate}
               </p>
-              <p className="text-[16px] mb-1 w-[160px]">{event.eventBudget}</p>
+              <p className='text-[15px] mb-1 w-[160px]'>{event.eventBudget}</p>
             </div>
-            <div className="bg-[#E4FFEA] rounded-full w-24 mb-4">
-              <p className="text-[#178751] text-[14px] text-center font-semibold px-2 py-1">
+            <div className='bg-[#E4FFEA] rounded-full w-24'>
+              <p className='text-[#178751] text-[14px] text-center font-semibold px-2 py-1'>
                 {event.eventType}
               </p>
             </div>
           </div>
         </div>
 
-        <div className="">
-          {user?.userType === "PROVIDER" && (
-            <div
-              className="flex justify-end cursor-pointer"
-              onClick={() => handleSaveEvent()}
+        <div className=''>
+          <div className='flex flex-col items-center'>
+            {' '}
+            {user?.userType === 'PROVIDER' && (
+              <div
+                className='flex justify-end cursor-pointer'
+                onClick={() => handleSaveEvent()}
+              >
+                <img src={SAVE_ICON} alt='aad' className='w-[23px]' />
+              </div>
+            )}
+            <Button
+              variant='filled'
+              color='indigo'
+              size='sm'
+              className='rounded-md w-max py-4 mt-4 px-4 bg-primary font-poppins flex justify-center'
+              disabled={daysLeft < 0}
+              onClick={() => navigate(`/events/${event._id}`)}
             >
-              <img src={SAVE_ICON} alt="aad" className="w-[23px]" />
-            </div>
-          )}
-
-          <Button
-            variant="filled"
-            color="indigo"
-            size="sm"
-            className="rounded-md w-36 py-4 mt-4 px-8 bg-primary font-poppins"
-            disabled={daysLeft < 0}
-            onClick={() => navigate(`/events/${event._id}`)}
-          >
-            <span className="text-white normal-case">Apply Now</span>
-          </Button>
-          <p
-            className={`text-[16px] mt-4 text-center ${
-              daysLeft < 0 && "text-red-500"
-            }`}
-          >
-            {daysLeft > 0
-              ? `${daysLeft} days left to apply`
-              : "Application closed"}
-          </p>
+              <span className='text-white normal-case'>
+                <p className='text-white normal-case text-[14px]'>Apply Now</p>
+              </span>
+            </Button>
+            <p
+              className={`text-[14px] mt-4 text-center ${
+                daysLeft < 0 && 'text-red-500'
+              }`}
+            >
+              {daysLeft > 0
+                ? `${daysLeft} days left to apply`
+                : 'Application closed'}
+            </p>
+          </div>
         </div>
       </div>
     </div>

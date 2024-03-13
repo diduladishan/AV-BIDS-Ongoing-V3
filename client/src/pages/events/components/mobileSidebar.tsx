@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   Collapse,
   Button,
@@ -13,7 +13,7 @@ import Filter_Icon from '../../../assets/09_events/Filter.png';
 
 // Renamed the function to start with an uppercase letter
 function MobileSidebar() {
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(false);
 
   const toggleOpen = () => setOpen((cur) => !cur);
 

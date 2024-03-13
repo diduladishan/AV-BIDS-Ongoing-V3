@@ -1,4 +1,4 @@
-import { Option, Select, Spinner } from '@material-tailwind/react';
+import { Option, Select, Spinner, Collapse } from '@material-tailwind/react';
 import { useEffect, useState } from 'react';
 import { setAlert } from '../../app/features/alerts/alertSlice';
 import { useAppDispatch, useAppSelector } from '../../app/hooks';
@@ -12,6 +12,9 @@ import Sidebar from './components/sidebar';
 import Breadcrumbs from '../../components/Breadcrumbs';
 
 import { Card } from '@material-tailwind/react';
+import MobileSidebar from './components/mobileSidebar';
+
+import Filter_Icon from '../../assets/09_events/Filter.png';
 
 function Index() {
   const dispatch = useAppDispatch();
@@ -115,8 +118,13 @@ function Index() {
     setSelectedSortOption(value);
   };
 
+  //toggle
+  const [open1, setOpen] = useState(true);
+
+  const toggleOpen = () => setOpen((cur) => !cur);
+
   return (
-    <div className='bg-[#f9f8ff] '>
+    <div className='bg-[#f9f8ff] relative h-[1200px]'>
       <Breadcrumbs />
       {loading ? (
         <div className='flex items-center justify-center h-screen'>
@@ -139,24 +147,38 @@ function Index() {
             />
           </div>
 
-          <div className='flex justify-center gap-16'>
-            <Card className='h-[calc(120vh-2rem)] shadow-none mb-6 bg-[#f9f8ff]'>
-              <div className=' '>
-                <Sidebar
-                  selectedEventType={selectedEventType}
-                  setSelectedEventType={setSelectedEventType}
-                  selectedEventCategory={selectedEventCategory}
-                  setSelectedEventCategory={setSelectedEventCategory}
-                  selectedEventSubCategory={selectedEventSubCategory}
-                  setSelectedEventSubCategory={setSelectedEventSubCategory}
-                  selectedPriceRange={selectedPriceRange}
-                  setSelectedPriceRange={setSelectedPriceRange}
-                  selectedAudienceSize={selectedAudienceSize}
-                  setSelectedAudienceSize={setSelectedAudienceSize}
-                  applyFilters={applyFilters}
-                />
-              </div>
-            </Card>
+          <div className='flex justify-center gap-6 '>
+            {/* <MobileSidebar /> */}
+            <div className='absolute md:relative top-10 left-3 z-10'>
+              <img
+                src={Filter_Icon}
+                onClick={toggleOpen}
+                alt='aad'
+                className='w-[16px]  block md:hidden'
+              />
+
+              <Collapse open={open1}>
+                {/* h-[calc(120vh-2rem)] */}
+                <Card className='h-full shadow-none mb-6 bg-[#f3f1fb]'>
+                  <div className=' '>
+                    <Sidebar
+                      selectedEventType={selectedEventType}
+                      setSelectedEventType={setSelectedEventType}
+                      selectedEventCategory={selectedEventCategory}
+                      setSelectedEventCategory={setSelectedEventCategory}
+                      selectedEventSubCategory={selectedEventSubCategory}
+                      setSelectedEventSubCategory={setSelectedEventSubCategory}
+                      selectedPriceRange={selectedPriceRange}
+                      setSelectedPriceRange={setSelectedPriceRange}
+                      selectedAudienceSize={selectedAudienceSize}
+                      setSelectedAudienceSize={setSelectedAudienceSize}
+                      applyFilters={applyFilters}
+                    />
+                  </div>
+                </Card>
+              </Collapse>
+            </div>
+
             {/* <Sidebar
               selectedEventType={selectedEventType}
               setSelectedEventType={setSelectedEventType}
@@ -171,9 +193,9 @@ function Index() {
               applyFilters={applyFilters}
             /> */}
 
-            <div className='w-max min-w-[1013px]'>
+            <div className='w-max'>
               <h2 className='text-center text-primary mb-4'>Event Listings</h2>
-              <div className='flex items-center justify-between mb-6 mx-4'>
+              <div className='flex items-center justify-between mb-6 mx-4 z-20'>
                 <p className='text-[14px]'>{events.length} events Found</p>
 
                 <div className='w-[200px]'>
@@ -198,7 +220,7 @@ function Index() {
 
               {currentEvents?.length ? (
                 currentEvents.map((event) => (
-                  <div key={event._id}>
+                  <div key={event._id} className='flex justify-center'>
                     <EventListingCard event={event} />
                   </div>
                 ))

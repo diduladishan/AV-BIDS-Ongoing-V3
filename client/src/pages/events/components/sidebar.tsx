@@ -80,9 +80,10 @@ const Sidebar: FC<SidebarProps> = ({
   };
 
   return (
-    <div className='bg-[#f3f1fb] ml-4 rounded-lg'>
+    <div className='bg-transparent rounded-lg'>
       <h2 className='text-primary text-[16px] mb-2 pl-4 pt-6'>Filters: </h2>
-      <Card className='h-[calc(110vh-2rem)] w-full max-w-[18rem] px-4  bg-[#f3f1fb] shadow-none'>
+      {/* h-[calc(110vh-2rem)] */}
+      <Card className='h-full w-full max-w-[18rem] px-4  bg-transparent shadow-none'>
         <div className='mb-2 p-4'>
           <div className='mb-4'>
             <h6>Event Type</h6>
