@@ -124,8 +124,11 @@ function Index() {
   const toggleOpen = () => setOpen((cur) => !cur);
 
   return (
-    <div className='bg-[#f9f8ff] relative h-[1200px]'>
-      <Breadcrumbs />
+    <div className='bg-[#f9f8ff] relative h-[1250px]'>
+      <div className='container mx-auto 2xl:pl-8'>
+        <Breadcrumbs />
+      </div>
+
       {loading ? (
         <div className='flex items-center justify-center h-screen'>
           <Spinner />
@@ -147,7 +150,7 @@ function Index() {
             />
           </div>
 
-          <div className='flex justify-center gap-6'>
+          <div className='flex justify-center 2xl:gap-[280px] xl:gap-[80px] lg:gap-[80px] md:gap-[20px]'>
             {/* <MobileSidebar /> */}
             <div className='absolute md:relative top-10 left-3 z-10'>
               <img
@@ -194,11 +197,11 @@ function Index() {
             /> */}
 
             <div className='w-max'>
-              <h2 className='text-center text-primary mb-4 2xl:mb-16 mt-6 xl:text-[40px] lg:text-[35px] md:text-[35px] text-[30px]'>
+              <h2 className='text-center text-primary mb-4 2xl:mb-16 xl:text-[40px] lg:text-[35px] md:text-[35px] text-[30px]'>
                 Event Listings
               </h2>
 
-              <div className='flex items-center justify-between mb-6 mx-4 z-20'>
+              <div className='flex items-center justify-between  mb-6 mx-4 z-20 gap-16 sm:gap-0'>
                 <p className='text-[14px]'>{events.length} events Found</p>
 
                 <div className='w-[200px]'>
@@ -206,6 +209,7 @@ function Index() {
                     label='Sort events'
                     value={selectedSortOption}
                     // @ts-ignore
+
                     onChange={handleSortChange}
                   >
                     <Option value='ending_soonest'>Ending Soonest</Option>
@@ -231,7 +235,7 @@ function Index() {
                 <p>No events found for the selected filters.</p>
               )}
 
-              <div className='flex justify-end mr-5'>
+              <div className='flex justify-end mr-5 pb-6'>
                 {currentEvents?.length > 0 && (
                   <Pagination
                     currentPage={currentPage}

@@ -104,7 +104,7 @@ const EventListingCard: FC<EventListingCardProps> = ({ event }) => {
           </div>
 
           <div className='lg:flex items-end gap-20 mt-0'>
-            <div className=''>
+            <div className='xl:flex gap-16'>
               <p className='text-[15px] mb-1 '>
                 Event Date: {event.eventStartDate} - {event.eventEndDate}
               </p>
