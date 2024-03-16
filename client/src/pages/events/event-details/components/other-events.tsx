@@ -25,7 +25,9 @@ const OtherEvents: FC<OtherEventsProps> = ({ events, loading }) => {
         </div>
       ) : (
         <>
-          <h2 className='text-[20px] mb-4'>Other events by this client</h2>
+          <h2 className='text-[22px] sm:text-[20px] mb-4'>
+            Other events by this client{' '}
+          </h2>
 
           {limitedEvents.length > 0 ? (
             limitedEvents?.map((event) => (
@@ -54,12 +56,12 @@ const OtherEvents: FC<OtherEventsProps> = ({ events, loading }) => {
                   <div>
                     <h2 className='text-[20px]'>{event.title}</h2>
 
-                    <div className='sm:flex gap-36'>
+                    <div className='xl:flex gap-36'>
                       <div className='sm:flex gap-2'>
-                        <p className='text-[16px] sm:text-[18px]'>
+                        <p className='text-[18px] sm:text-[18px]'>
                           Event Date:
                         </p>
-                        <p className='text-[14px] sm:text-[18px]'>
+                        <p className='text-[16px] sm:text-[18px]'>
                           {event.eventStartDate} - {event.eventEndDate}
                         </p>
                       </div>
@@ -69,8 +71,8 @@ const OtherEvents: FC<OtherEventsProps> = ({ events, loading }) => {
                       </p>
                     </div>
 
-                    <div className='flex items-center justify-between gap-16 mt-4 w-full'>
-                      <div className='flex gap-2 items-center justify-center w-[250px]'>
+                    <div className='xl:flex items-center gap-16 mt-4 w-full'>
+                      <div className='flex gap-1 items-center w-full justify-center sm:justify-start mb-1 sm:mb-0'>
                         <img
                           src={EVENTDETAILS_04}
                           alt='Location Icon'
@@ -81,17 +83,19 @@ const OtherEvents: FC<OtherEventsProps> = ({ events, loading }) => {
                         </p>
                       </div>
 
-                      <div>
-                        <p className='text-[16px] sm:w-[270px]'>
-                          {event.eventCategory}, {event.eventSubCategory}
-                        </p>
-                      </div>
-
-                      <div className='flex items-center justify-center'>
-                        <div className='rounded-full w-[90px] sm:w-[110px] py-2 px-3 bg-[#B5F9C4] font-poppins'>
-                          <p className='text-[#178751] font-semibold normal-case text-center text-[12px] sm:text-[16px]'>
-                            {event.eventType}
+                      <div className='sm:flex items-end justify-center gap-16'>
+                        <div className=''>
+                          <p className='text-[16px] sm:w-[270px] mb-2 sm:mb-0'>
+                            {event.eventCategory}, {event.eventSubCategory}
                           </p>
+                        </div>
+
+                        <div className='flex items-center justify-center'>
+                          <div className='rounded-full w-[90px] sm:w-[110px] py-2 px-3 bg-[#B5F9C4] font-poppins'>
+                            <p className='text-[#178751] font-semibold normal-case text-center text-[12px] sm:text-[16px]'>
+                              {event.eventType}
+                            </p>
+                          </div>
                         </div>
                       </div>
                     </div>

@@ -276,6 +276,7 @@ export function Index() {
             </Dialog>
           </section>
         </div>
+
         <div className='col-span-2 sm:col-span-1 flex items-start justify-center mx-2'>
           <section>
             {/* Only provider can submit proposals and save events */}
