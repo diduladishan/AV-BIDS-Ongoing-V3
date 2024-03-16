@@ -1,15 +1,15 @@
-import React, { useEffect, useState } from "react";
-import Monthly from "../../../assets/17_billing/month_img.png";
-import Yearly from "../../../assets/17_billing/yearly_img.png";
+import React, { useEffect, useState } from 'react';
+import Monthly from '../../../assets/17_billing/month_img.png';
+import Yearly from '../../../assets/17_billing/yearly_img.png';
 
-import { setPrice } from "../../../app/features/stripe/stripeSlice";
-import { useAppDispatch } from "../../../app/hooks";
-import { StripePrice } from "../../../types";
-import api from "../../../utils/api";
-import PaymentPlanCard from "./payment-plan-card";
+import { setPrice } from '../../../app/features/stripe/stripeSlice';
+import { useAppDispatch } from '../../../app/hooks';
+import { StripePrice } from '../../../types';
+import api from '../../../utils/api';
+import PaymentPlanCard from './payment-plan-card';
 
-import backgroundArt01 from "../../../assets/17_billing/backgroundArt01.png";
-import backgroundArt02 from "../../../assets/17_billing/backgroundArt02.png";
+import backgroundArt01 from '../../../assets/17_billing/backgroundArt01.png';
+import backgroundArt02 from '../../../assets/17_billing/backgroundArt02.png';
 
 interface Page01Props {
   onNext: () => void;
@@ -21,7 +21,7 @@ const Page01: React.FC<Page01Props> = ({ onNext }) => {
 
   useEffect(() => {
     const fetchPrices = async () => {
-      const { data } = await api.get("/stripe/config");
+      const { data } = await api.get('/stripe/config');
       setPrices(data.prices);
       dispatch(setPrice(data.prices));
     };
@@ -30,41 +30,43 @@ const Page01: React.FC<Page01Props> = ({ onNext }) => {
 
   return (
     <div>
-      <p className="text-[#195c87] font-medium text-[28px] mb-2 text-center mt-[100px]">
+      <p className='text-[#195c87] font-medium text-[28px] mb-2 text-center mt-[100px]'>
         AV Bids - Powering Event Connections!
       </p>
-      <p className="text-[#4d5768]  text-[16px] mb-2 text-center">
+      <p className='text-[#4d5768]  text-[16px] mb-2 text-center'>
         Yes, AV Bids offers paid services to help event planners plan and
         prepare their events for success.
       </p>
 
-      <div className="flex justify-center gap-6 mb-20  relative">
-        <div className="absolute top-0 left-[0px] hidden lg:block">
+      <div className='flex justify-center gap-6 mb-20  relative'>
+        <div className='absolute top-0 left-[0px] hidden lg:block'>
           <img
             src={backgroundArt01}
-            alt="background img 01 for billing page"
-            className="w-[230px] hidden 2xl:block"
+            alt='background img 01 for billing page'
+            className='w-[230px] hidden 2xl:block'
           />
         </div>
 
-        <div className="absolute top-0 right-[0px] ">
+        <div className='absolute top-0 right-[0px] '>
           <img
             src={backgroundArt02}
-            alt="background img 02 for billing page"
-            className="w-[230px] hidden 2xl:block"
+            alt='background img 02 for billing page'
+            className='w-[230px] hidden 2xl:block'
           />
         </div>
 
-        {prices.map((price) => (
-          <PaymentPlanCard
-            key={price.id}
-            src={price.recurring.interval === "year" ? Yearly : Monthly}
-            plan={price}
-            price={price.unit_amount / 100}
-            priceId={price.id}
-            onNext={onNext}
-          />
-        ))}
+        <div className='xl:flex gap-6'>
+          {prices.map((price) => (
+            <PaymentPlanCard
+              key={price.id}
+              src={price.recurring.interval === 'year' ? Yearly : Monthly}
+              plan={price}
+              price={price.unit_amount / 100}
+              priceId={price.id}
+              onNext={onNext}
+            />
+          ))}
+        </div>
 
         {/* <div className='text-primary_font_color px-8 pt-4'>
           <p className='font-medium mb-4 text-primary_font_color '>
